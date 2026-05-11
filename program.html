@@ -1,396 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Primary Meta Tags -->
-  <title>Success Without Sacrifice — 12-Week Coaching Program | Zafeer</title>
-  <meta name="description" content="Transform your life with Zafeer's 12-week resilience coaching program for women. The D4 Formula: Discover, Decide, Design, Develop. Personalised, online, results-driven. Book now.">
-  <meta name="keywords" content="resilience coaching program, 12-week coaching, D4 formula coaching, success without sacrifice, women's coaching program, professional development coaching, mindset program, life coaching online, burnout recovery program, women's resilience">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Zaina Warne">
-  <link rel="canonical" href="https://zafeer.ca/program.html">
-
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="Zafeer">
-  <meta property="og:title"       content="Success Without Sacrifice — 12-Week Coaching Program | Zafeer">
-  <meta property="og:description" content="Transform your life with Zafeer's 12-week resilience coaching program. The D4 Formula: Discover, Decide, Design, Develop. Personalised and online. Book your call today.">
-  <meta property="og:image"       content="https://img1.wsimg.com/isteam/ip/88c62dd3-3a5a-41d3-aa33-3b1347f879d5/blob-f23a2bb.png">
-  <meta property="og:url"         content="https://zafeer.ca/program.html">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Success Without Sacrifice — 12-Week Coaching Program | Zafeer">
-  <meta name="twitter:description" content="Transform your life with Zafeer's 12-week resilience coaching program. The D4 Formula for professional women. Book now.">
-  <meta name="twitter:image"       content="https://img1.wsimg.com/isteam/ip/88c62dd3-3a5a-41d3-aa33-3b1347f879d5/blob-f23a2bb.png">
-
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://img1.wsimg.com">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Shared Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=2">
-
-  <!-- Critical Inline CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Without Sacrifice — The Program | Zaina Warne</title>
+  <meta name="description" content="A 12-week private coaching program for high-achieving women in tech who are done proving their worth — and ready to claim it." />
+  <meta name="robots" content="index, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    body{font-family:'Lato',Arial,sans-serif;margin:0;background:#FDF9F6;color:#3C2F2B}
-    .page-hero{background:linear-gradient(140deg,#4A3835 0%,#7A4A44 100%);padding:5rem 1.5rem;text-align:center}
-    h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:        #E8DDD0;
+      --cream-mid:    #DDD0C0;
+      --cream-dark:   #C8B8A4;
+      --burgundy:     #6B1E2E;
+      --burgundy-lt:  #8B3040;
+      --burgundy-pale:#F2EAE4;
+      --text-dark:    #2C1810;
+      --text-mid:     #5A3A2A;
+      --text-light:   #8C6A56;
+      --white:        #FAF7F4;
+      --border:       rgba(107,30,46,0.13);
+      --border-md:    rgba(107,30,46,0.22);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    .nav-outer { border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 100; background: rgba(232,221,208,0.95); backdrop-filter: blur(10px); }
+    nav { max-width: 1160px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--burgundy); }
+    .nav-links .nav-book { padding: 0.6rem 1.4rem; border: 1px solid var(--burgundy); color: var(--burgundy); border-radius: 1px; transition: background 0.2s, color 0.2s; }
+    .nav-links .nav-book:hover { background: var(--burgundy); color: var(--cream); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--burgundy); }
+
+    /* ── BUTTONS ── */
+    .btn-primary { display: inline-block; padding: 0.95rem 2rem; background: var(--burgundy); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--burgundy-lt); transform: translateY(-1px); }
+    .btn-secondary { display: inline-block; padding: 0.95rem 2rem; background: transparent; color: var(--burgundy); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; border: 1px solid var(--burgundy); transition: background 0.2s, color 0.2s; }
+    .btn-secondary:hover { background: var(--burgundy); color: var(--cream); }
+
+    /* ── SHARED ── */
+    .section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--burgundy); opacity: 0.5; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1rem; }
+    .section-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .section-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--burgundy);
+      padding: 7rem 2rem 6rem;
+      text-align: center;
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(232,221,208,0.6); margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 36px; height: 0.5px; background: rgba(232,221,208,0.3); }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 4.8rem); font-weight: 300; color: var(--cream); line-height: 1.05; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .hero h1 em { font-style: italic; font-weight: 400; }
+    .hero-rule { width: 50px; height: 0.5px; background: rgba(232,221,208,0.35); margin: 2rem auto; }
+    .hero-sub { font-size: 1.1rem; color: rgba(232,221,208,0.8); line-height: 1.85; margin-bottom: 2.5rem; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .hero-sub strong { color: var(--cream); font-weight: 500; }
+    .hero-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-cream { display: inline-block; padding: 0.95rem 2rem; background: var(--cream); color: var(--text-dark); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s; }
+    .btn-cream:hover { background: var(--cream-dark); }
+    .btn-outline-cream { display: inline-block; padding: 0.95rem 2rem; border: 1px solid rgba(232,221,208,0.5); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, border-color 0.2s; }
+    .btn-outline-cream:hover { background: rgba(232,221,208,0.1); border-color: var(--cream); }
+
+    /* ── INVISIBLE CEILING ── */
+    .ceiling-section { max-width: 1160px; margin: 0 auto; padding: 6rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .ceiling-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 1.5rem; }
+    .ceiling-body strong { color: var(--text-dark); font-weight: 500; }
+    .ceiling-image { position: relative; border-radius: 2px; overflow: hidden; }
+    .ceiling-image img { width: 100%; height: 460px; object-fit: cover; object-position: center top; display: block; border-radius: 2px; }
+    .ceiling-image-caption { margin-top: 0.875rem; font-size: 0.8rem; color: var(--text-light); font-style: italic; text-align: center; }
+
+    /* ── SECRET SAUCE ── */
+    .secret-sauce { background: var(--white); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 5rem 2rem; text-align: center; }
+    .secret-sauce-inner { max-width: 760px; margin: 0 auto; }
+    .sauce-line { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.35; margin-bottom: 1.25rem; }
+    .sauce-line strong { font-style: normal; font-weight: 600; color: var(--burgundy); }
+    .sauce-attr { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-light); }
+
+    /* ── D4 FORMULA ── */
+    .d4-section { padding: 6rem 2rem; }
+    .d4-inner { max-width: 1160px; margin: 0 auto; }
+    .d4-header { max-width: 600px; margin-bottom: 4rem; }
+    .d4-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .d4-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 2.5rem 2rem; transition: border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .d4-card:hover { border-color: var(--burgundy); box-shadow: 0 4px 24px rgba(107,30,46,0.06); }
+    .d4-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--burgundy); transition: height 0.3s ease; }
+    .d4-card:hover::before { height: 100%; }
+    .d4-phase { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.75rem; }
+    .d4-letter { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--burgundy); opacity: 0.12; line-height: 1; position: absolute; top: 1rem; right: 1.5rem; }
+    .d4-title { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.875rem; line-height: 1.2; }
+    .d4-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
+
+    /* ── WHAT'S INCLUDED ── */
+    .included-section { background: var(--white); border-top: 0.5px solid var(--border); padding: 6rem 2rem; }
+    .included-inner { max-width: 1160px; margin: 0 auto; }
+    .included-header { max-width: 600px; margin-bottom: 4rem; }
+    .included-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .included-card { border: 0.5px solid var(--border); border-radius: 2px; padding: 2rem 1.75rem; background: var(--cream); }
+    .included-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--burgundy); opacity: 0.3; line-height: 1; margin-bottom: 1rem; }
+    .included-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.75rem; line-height: 1.3; }
+    .included-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
+
+    /* ── IS THIS YOU ── */
+    .qualifying-section { padding: 6rem 2rem; }
+    .qualifying-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .qualifying-checks { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+    .check-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .check-box { width: 20px; height: 20px; border: 1px solid var(--burgundy); border-radius: 1px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 3px; }
+    .check-box::after { content: '✓'; font-size: 0.65rem; color: var(--burgundy); font-weight: 600; }
+    .check-text { font-size: 1.02rem; color: var(--text-mid); line-height: 1.75; }
+    .qualifying-cta-box { background: var(--burgundy); border-radius: 2px; padding: 3rem 2.5rem; }
+    .qualifying-cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 300; color: var(--cream); line-height: 1.3; margin-bottom: 1.25rem; }
+    .qualifying-cta-box h3 em { font-style: italic; }
+    .qualifying-cta-body { font-size: 1rem; color: rgba(232,221,208,0.8); line-height: 1.85; margin-bottom: 2rem; }
+
+    /* ── RISK REVERSAL ── */
+    .risk-section { background: var(--burgundy-pale); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 5rem 2rem; }
+    .risk-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .risk-inner .section-eyebrow { justify-content: center; }
+    .risk-inner .section-eyebrow::before { display: none; }
+    .risk-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 300; color: var(--text-dark); line-height: 1.3; margin-bottom: 1.5rem; }
+    .risk-title em { font-style: italic; color: var(--burgundy); }
+    .risk-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; }
+
+    /* ── FINAL CTA ── */
+    .final-cta { padding: 7rem 2rem; text-align: center; }
+    .final-cta-inner { max-width: 640px; margin: 0 auto; }
+    .final-rule { width: 40px; height: 0.5px; background: var(--burgundy); margin: 0 auto 2.5rem; opacity: 0.4; }
+    .final-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1.25rem; }
+    .final-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .final-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2.5rem; }
+    .final-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; margin-top: 0.75rem; max-width: 260px; }
+    .footer-col-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 1.25rem; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.88rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--burgundy); }
+    .footer-contact { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; }
+    .footer-contact a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--burgundy); }
+    .footer-bottom { border-top: 0.5px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1160px; margin: 0 auto; }
+    .footer-copy { font-size: 0.75rem; color: var(--text-light); }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { font-size: 0.75rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--burgundy); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--burgundy); letter-spacing: 0.05em; }
+
+    /* ── ANIMATIONS ── */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .ceiling-section, .qualifying-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ceiling-image img { height: 320px; }
+      .d4-grid { grid-template-columns: 1fr; }
+      .included-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      nav .nav-links { display: none; }
+      nav .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 0.5px solid var(--border); padding: 1.5rem 2rem; gap: 1.25rem; }
+      .nav-hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .included-grid { grid-template-columns: 1fr; }
+      .hero-ctas, .final-ctas { flex-direction: column; align-items: center; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <header class="site-nav" id="site-nav" role="banner">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Zafeer — Back to home">
-        <img src="https://img1.wsimg.com/isteam/ip/88c62dd3-3a5a-41d3-aa33-3b1347f879d5/Zafeer%20(3).png/:/rs=h:100,cg:true,m/qt=q:95"
-             alt="Zafeer — Women's Resilience Coaching" height="52" width="auto">
+  <!-- NAV -->
+  <div class="nav-outer">
+    <nav>
+      <a href="https://zafeer.ca/" style="text-decoration:none;">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--burgundy);letter-spacing:0.06em;">Zafeer</span>
       </a>
-      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="program.html" class="active">Program</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="about.html">About</a>
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Call</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="nav-links">
+      <div class="nav-links" id="navLinks">
+        <a href="https://zafeer.ca/index.html">Home</a>
+        <a href="https://zafeer.ca/program.html">Program</a>
+        <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
+        <a href="https://zafeer.ca/about.html">About</a>
+        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="nav-book">Book a Call</a>
+      </div>
+      <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
-      </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">12-Week Private Coaching Program</div>
+      <h1><em>Success Without</em><br>Sacrifice</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">For high-achieving women in tech who are <strong>done proving their worth</strong> — and ready to claim the promotion, the salary, the title, and the seat at the table they have already earned.</p>
+      <div class="hero-ctas">
+        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-cream">Book Your Discovery Call</a>
+        <a href="#d4" class="btn-outline-cream">Explore the D4 Formula</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main-content">
+  <!-- INVISIBLE CEILING -->
+  <section class="ceiling-section">
+    <div class="fade-up">
+      <div class="section-eyebrow">The Real Problem</div>
+      <h2 class="section-title">You have done<br>everything <em>right.</em><br>And still.</h2>
+      <p class="ceiling-body">You've read the books. Attended the seminars. Followed the frameworks. You may have even had a career coach. You have done everything right — and you are still not breaking through.</p>
+      <p class="ceiling-body">That is because every solution you've tried was built around what you need to <strong>do.</strong> No one was telling you who you need to <strong>be.</strong></p>
+      <p class="ceiling-body">The barrier was never the glass ceiling above you. It was always the <strong>invisible ceiling inside you</strong> — the beliefs quietly running your career decisions, telling you to wait a little longer, prove a little more, be a little safer.</p>
+      <p class="ceiling-body">What's missing in every solution you have tried is the inner work — one that transforms not just your strategy and technique, but <strong>who you are.</strong> So you stop fighting to earn your place and start showing up knowing that you already belong there.</p>
+    </div>
+    <div class="fade-up">
+      <div class="ceiling-image">
+        <img src="women.jpeg" alt="Women in leadership — Success Without Sacrifice coaching program" />
+      </div>
+      <div class="ceiling-image-caption">The women who break through don't work harder. They show up differently.</div>
+    </div>
+  </section>
 
-    <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero" aria-labelledby="program-h1">
-      <span class="section-label" style="position:relative;">The Signature Program</span>
-      <h1 id="program-h1">Success Without Sacrifice</h1>
-      <p>A 12-week resilience coaching program for professional women — built on science, fuelled by purpose, and tailored entirely to you.</p>
-    </section>
+  <!-- SECRET SAUCE -->
+  <div class="secret-sauce">
+    <div class="secret-sauce-inner">
+      <div class="sauce-line">"You don't negotiate your way to power.<br><strong>You become powerful first</strong> — and negotiate from there."</div>
+      <div class="sauce-attr">— Zaina Warne, Success Without Sacrifice</div>
+    </div>
+  </div>
 
-    <!-- ===== PROGRAM OVERVIEW ===== -->
-    <section class="section" id="overview" aria-labelledby="overview-heading">
-      <div class="container">
-        <div class="program-intro">
-          <div>
-            <span class="section-label">Why This Program?</span>
-            <h2 class="section-heading" id="overview-heading">You Don't Have to Choose Between Success and Wellbeing</h2>
-            <p style="color:var(--gray); margin-bottom:1.1rem;">
-              For too long, high-achieving women have been told that sacrifice is the price of success —
-              that burning out, missing moments, and running on empty is just the cost of ambition.
-              Zaina Warne built the <em>Success Without Sacrifice</em> program to prove that belief wrong.
-            </p>
-            <p style="color:var(--gray); margin-bottom:1.1rem;">
-              Grounded in resilience science, positive psychology, and over a decade of coaching
-              experience, this 12-week journey uses the proprietary <strong>D4 Formula</strong>
-              to help you discover who you are, decide what you truly want, design a life that
-              reflects your values, and develop the mindset and habits to sustain it.
-            </p>
-            <p style="color:var(--gray);">
-              The result? A version of you that is productive <em>and</em> present. Ambitious
-              <em>and</em> at peace. Successful — without sacrifice.
-            </p>
-          </div>
-          <figure>
-            <img
-              src="https://img1.wsimg.com/isteam/ip/88c62dd3-3a5a-41d3-aa33-3b1347f879d5/blob-69b5733.png/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:600,h:600,cg:true"
-              alt="Women in a Zafeer group coaching session, embodying resilience and connection"
-              loading="lazy"
-              width="600" height="450">
-          </figure>
+  <!-- D4 FORMULA -->
+  <section class="d4-section" id="d4">
+    <div class="d4-inner">
+      <div class="d4-header fade-up">
+        <div class="section-eyebrow">The Framework</div>
+        <h2 class="section-title">The <em>D4 Formula</em></h2>
+        <p class="section-body" style="margin-top:1rem;">Four phases. Each one building on the last. This is not a curriculum — it is a transformation roadmap built around the woman you are becoming, not the one you have been performing.</p>
+      </div>
+      <div class="d4-grid">
+        <div class="d4-card fade-up">
+          <div class="d4-letter">D</div>
+          <div class="d4-phase">Phase 01</div>
+          <div class="d4-title">Discover</div>
+          <p class="d4-body">We start by uncovering the beliefs, the patterns, and the origins that have been quietly running your career decisions. You name the loop. You understand it. And you build the foundation everything else will rest on.</p>
+        </div>
+        <div class="d4-card fade-up">
+          <div class="d4-letter">D</div>
+          <div class="d4-phase">Phase 02</div>
+          <div class="d4-title">Design</div>
+          <p class="d4-body">We create your Customized Coaching Blueprint — priorities, career strategies, boundary structures, financial direction, relationship clarity. A practical architecture built around the woman you are becoming — not the one you've been performing.</p>
+        </div>
+        <div class="d4-card fade-up">
+          <div class="d4-letter">D</div>
+          <div class="d4-phase">Phase 03</div>
+          <div class="d4-title">Decide</div>
+          <p class="d4-body">You make powerful, values-aligned decisions about the life you actually want. You define your non-negotiables. You set your vision. And you commit to making the transformation irreversible.</p>
+        </div>
+        <div class="d4-card fade-up">
+          <div class="d4-letter">D</div>
+          <div class="d4-phase">Phase 04</div>
+          <div class="d4-title">Develop</div>
+          <p class="d4-body">You build the mindset, the habits, and the emotional intelligence that sustain everything long after we finish. Here you will learn negotiation techniques, get to role play and practice them, and get feedback. This phase is about making it permanent — not just for the next promotion cycle. For life.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== D4 FORMULA ===== -->
-    <section class="section section-alt" id="d4-formula" aria-labelledby="d4-heading">
-      <div class="container text-center">
-        <span class="section-label">The Framework</span>
-        <h2 class="section-heading" id="d4-heading">The D4 Formula</h2>
-        <p class="section-sub">
-          Four transformative phases. One powerful outcome: a resilient life built on your terms.
-        </p>
-
-        <div class="d4-grid">
-
-          <article class="d4-card">
-            <p class="d4-label">Phase 01 — D1</p>
-            <p class="d4-phase" aria-hidden="true">D1</p>
-            <h3>Discover</h3>
-            <p>
-              Every transformation begins with honest self-awareness. In the Discover phase, we
-              illuminate the patterns, beliefs, and behaviours that are secretly sabotaging your
-              resilience. Through guided assessments, values mapping, and reflective exercises,
-              you gain profound clarity on who you are and why you respond to pressure the way you do.
-              This is the foundation everything else is built on.
-            </p>
-          </article>
-
-          <article class="d4-card">
-            <p class="d4-label">Phase 02 — D2</p>
-            <p class="d4-phase" aria-hidden="true">D2</p>
-            <h3>Decide</h3>
-            <p>
-              Clarity without commitment is just a daydream. In the Decide phase, you make powerful,
-              values-aligned decisions about the life you truly want to lead — not the one you've
-              been performing. We define your non-negotiables, your vision for success, and the
-              boundaries required to protect what matters most. This is where your transformation
-              becomes intentional and irreversible.
-            </p>
-          </article>
-
-          <article class="d4-card">
-            <p class="d4-label">Phase 03 — D3</p>
-            <p class="d4-phase" aria-hidden="true">D3</p>
-            <h3>Design</h3>
-            <p>
-              With your vision locked in, it's time to build your life architecture. In the Design
-              phase, Zaina works with you to create a personalised resilience blueprint — a practical,
-              sustainable plan that weaves your goals, boundaries, and self-care into your daily
-              reality. Routines, relationships, and rhythms are all redesigned to support the woman
-              you're becoming, not the one you've been trying to escape.
-            </p>
-          </article>
-
-          <article class="d4-card">
-            <p class="d4-label">Phase 04 — D4</p>
-            <p class="d4-phase" aria-hidden="true">D4</p>
-            <h3>Develop</h3>
-            <p>
-              The final phase is where everything integrates. The Develop phase focuses on building
-              the mindset, skills, and habits that make your new life sustainable long after the
-              program ends. You'll develop your emotional intelligence, stress-response awareness,
-              communication boundaries, and a personalised resilience practice — so that no matter
-              what life throws at you, you have the inner resources to meet it with grace and grit.
-            </p>
-          </article>
-
+  <!-- WHAT'S INCLUDED -->
+  <section class="included-section">
+    <div class="included-inner">
+      <div class="included-header fade-up">
+        <div class="section-eyebrow">What You Receive</div>
+        <h2 class="section-title">Everything you need.<br><em>Nothing you don't.</em></h2>
+        <p class="section-body" style="margin-top:1rem;">12 weeks. Fully personalized. No scripts. No generic playbook. Built entirely around your situation, your organization, and your invisible ceiling.</p>
+      </div>
+      <div class="included-grid">
+        <div class="included-card fade-up">
+          <div class="included-num">01</div>
+          <div class="included-title">12 Private 1-on-1 Sessions</div>
+          <p class="included-body">One per week, 60 minutes each, over three months. Fully personalized to your situation, your organization, your invisible ceiling. No scripts. No generic playbook.</p>
+        </div>
+        <div class="included-card fade-up">
+          <div class="included-num">02</div>
+          <div class="included-title">Done-at-Home Exercises</div>
+          <p class="included-body">Designed to deepen what we uncover in our sessions and anchor the shifts into your daily life — not just in our conversations.</p>
+        </div>
+        <div class="included-card fade-up">
+          <div class="included-num">03</div>
+          <div class="included-title">Personal Resilience Workbook</div>
+          <p class="included-body">A comprehensive assessment of the various areas of your life — the foundation for your transformation and the starting point for your customized blueprint.</p>
+        </div>
+        <div class="included-card fade-up">
+          <div class="included-num">04</div>
+          <div class="included-title">Customized Resilience Blueprint</div>
+          <p class="included-body">Built with you during Phase 2. Your personal roadmap, designed around the woman you are becoming. You carry this forward for life.</p>
+        </div>
+        <div class="included-card fade-up">
+          <div class="included-num">05</div>
+          <div class="included-title">Unlimited Email Support</div>
+          <p class="included-body">Because the moments that matter most don't always wait for a scheduled call. Zaina is in your corner when it counts — between sessions, not just during them.</p>
+        </div>
+        <div class="included-card fade-up">
+          <div class="included-num">06</div>
+          <div class="included-title">Progress Reviews at Weeks 4, 8 & 12</div>
+          <p class="included-body">Structured check-ins to ensure you're on track, adjusting course as needed, and celebrating every milestone along the way.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== WHAT'S INCLUDED ===== -->
-    <section class="section" id="whats-included" aria-labelledby="included-heading">
-      <div class="container text-center">
-        <span class="section-label">Everything You Need</span>
-        <h2 class="section-heading" id="included-heading">What's Included</h2>
-        <p class="section-sub">
-          The Success Without Sacrifice program is a comprehensive, fully-supported experience
-          designed to give you every resource you need to succeed.
-        </p>
-
-        <div class="included-grid">
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">01</div>
-            <div>
-              <h4>Weekly 1-on-1 Coaching Sessions</h4>
-              <p>Twelve 60-minute private video sessions with Zaina — fully personalised, deeply supportive, and powerfully action-oriented. No generic scripts, no cookie-cutter advice.</p>
-            </div>
+  <!-- IS THIS YOU -->
+  <section class="qualifying-section">
+    <div class="qualifying-inner">
+      <div class="fade-up">
+        <div class="section-eyebrow">Is This You</div>
+        <h2 class="section-title">This program<br>was built <em>for you</em><br>if —</h2>
+        <div class="qualifying-checks">
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">You are genuinely open to seeing yourself and your situation in a new light</div>
           </div>
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">02</div>
-            <div>
-              <h4>Personal Resilience Assessment Workbook</h4>
-              <p>Your companion throughout the journey — a comprehensive digital workbook packed with exercises, reflections, and frameworks to deepen your self-discovery and track your transformation.</p>
-            </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">You are done making excuses and ready to make serious decisions about your career</div>
           </div>
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">03</div>
-            <div>
-              <h4>Private Community Access</h4>
-              <p>Join a curated, confidential community of women going through the same journey. Share wins, ask questions, and find support in a space that truly gets it.</p>
-            </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">You appreciate 1-on-1 partnership, accountability, and guidance — rather than figuring it out alone</div>
           </div>
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">04</div>
-            <div>
-              <h4>Unlimited Email Support</h4>
-              <p>Zaina is in your corner between sessions. Get guidance, accountability, and encouragement whenever you need it most — because breakthroughs don't always wait for scheduled calls.</p>
-            </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">You are done running on the treadmill going nowhere — and ready to lead yourself to the next level of your career and your life</div>
           </div>
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">05</div>
-            <div>
-              <h4>Customised Resilience Blueprint</h4>
-              <p>A tailored action plan created collaboratively in Phase 3 — your personal roadmap for sustainable success that you'll continue using long after the program ends.</p>
-            </div>
-          </div>
-
-          <div class="included-item">
-            <div class="included-marker" aria-hidden="true">06</div>
-            <div>
-              <h4>Goal-Setting & Progress Reviews</h4>
-              <p>Structured check-ins at weeks 4, 8, and 12 ensure you're on track, adjusting course as needed, and celebrating every milestone along the way.</p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
-
-    <!-- ===== IS THIS RIGHT FOR YOU ===== -->
-    <section class="section section-alt" id="right-for-you" aria-labelledby="right-heading">
-      <div class="container">
-        <div class="checklist-wrap">
-
-          <div class="checklist-text">
-            <span class="section-label">Is This You?</span>
-            <h3 id="right-heading">This Program Is Right For You If…</h3>
-            <p>
-              The Success Without Sacrifice program is designed for a specific woman — one who is
-              ready for real change, not just inspiration. Read through the checklist and see how
-              many of these resonate.
-            </p>
-            <a href="https://calendly.com/zaina-warne/zoom-coffee"
-               class="btn btn-primary"
-               target="_blank" rel="noopener noreferrer">
-              Book Your Free Discovery Call
-            </a>
-          </div>
-
-          <div class="checklist-items" role="list">
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You feel like you're succeeding at work but failing at life — or vice versa.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You're exhausted by the constant hustle but don't know how to slow down without falling behind.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You struggle to set and hold boundaries — at work, at home, or both.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You've been chasing a version of success that doesn't actually make you happy.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You want a coach who will challenge you, champion you, and hold you accountable.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You're ready to do the inner work that creates lasting outer change.</span>
-            </div>
-            <div class="check-item" role="listitem">
-              <span class="check-mark" aria-hidden="true">✓</span>
-              <span>You believe you are capable of more — and you're ready to prove it.</span>
-            </div>
-          </div>
-
-        </div>
+      <div class="qualifying-cta-box fade-up">
+        <h3>The only thing standing between you and what you want is the story you've been telling yourself.<br><em>And you have the power to change that story.</em></h3>
+        <p class="qualifying-cta-body">Not someday. Not when you have more experience, more credentials, more proof. Now. Book a Discovery Call and let's find out if Success Without Sacrifice is the right next move for you.</p>
+        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-cream">Book Your Discovery Call</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== PROGRAM CTA ===== -->
-    <section class="cta-section" aria-labelledby="program-cta-heading">
-      <h2 id="program-cta-heading">Your Most Resilient Self Is Waiting</h2>
-      <p>
-        Spots in the Success Without Sacrifice program are intentionally limited to ensure Zaina
-        can give every client the deep, personalised support they deserve. Don't wait.
-      </p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/zaina-warne/zoom-coffee"
-           class="btn btn-primary btn-lg"
-           target="_blank" rel="noopener noreferrer">
-          Book Your Free Discovery Call
-        </a>
-        <a href="https://www.dropbox.com/scl/fi/wuje9j872amx6f2wj2771/Personal-Resilience-Assessment-Workbook-V2.0.pdf?rlkey=hyszorabpe27iyii0217zcc62&st=ldhrjt1j&dl=0"
-           class="btn btn-secondary btn-lg"
-           target="_blank" rel="noopener noreferrer">
-          Download Free Workbook First
-        </a>
+  <!-- RISK REVERSAL -->
+  <section class="risk-section">
+    <div class="risk-inner fade-up">
+      <div class="section-eyebrow">A Note From Zaina</div>
+      <h2 class="risk-title">You do not need to implement everything <em>perfectly</em> for this to work.</h2>
+      <p class="risk-body">Many of the women I've worked with tell me that the Discover phase alone — just the act of finally naming the belief that had been silently running their career — was worth the entire investment on its own. Even partial implementation of this work creates results that are real and lasting. Because we're not building a performance. We're building an identity. And identity doesn't disappear when things get busy.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-inner fade-up">
+      <div class="final-rule"></div>
+      <h2 class="final-title">Ready to stop proving<br>and start <em>claiming</em>?</h2>
+      <p class="final-body">Your transformation starts with one conversation. Book your Discovery Call with Zaina today — and take the first real step toward the seat at the table, the financial freedom, and the life you have already earned.</p>
+      <div class="final-ctas">
+        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-primary">Book Your Discovery Call</a>
+        <a href="https://zafeer.ca/about.html" class="btn-secondary">Meet Zaina →</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- FOOTER -->
+  <footer>
     <div class="footer-inner">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <img src="https://img1.wsimg.com/isteam/ip/88c62dd3-3a5a-41d3-aa33-3b1347f879d5/Zafeer%20(3).png/:/rs=h:100,cg:true,m/qt=q:95"
-               alt="Zafeer logo" loading="lazy" height="46">
-          <p class="footer-tagline">Success without Sacrifice</p>
-          <p>Empowering professional women to build resilience, restore balance, and lead with purpose.</p>
-        </div>
-
-        <div>
-          <p class="footer-heading">Navigate</p>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="program.html">Program</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="about.html">About Zaina</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="footer-heading">Resources</p>
-          <ul class="footer-links">
-            <li><a href="https://www.dropbox.com/scl/fi/wuje9j872amx6f2wj2771/Personal-Resilience-Assessment-Workbook-V2.0.pdf?rlkey=hyszorabpe27iyii0217zcc62&st=ldhrjt1j&dl=0" target="_blank" rel="noopener noreferrer">Free Resilience Workbook</a></li>
-            <li><a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a></li>
-            <li><a href="program.html">The D4 Formula</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="footer-heading">Connect</p>
-          <div class="social-links" aria-label="Social media links">
-            <a href="https://www.linkedin.com/in/zaina-warne/" class="social-link" aria-label="Zaina Warne on LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-          </div>
-          <p class="footer-contact">
-            Toronto, Ontario, Canada<br>
-            <a href="mailto:coaching@zafeer.ca" style="color:var(--rose-light);">coaching@zafeer.ca</a>
-          </p>
-        </div>
-
+      <div>
+        <div class="footer-logo">Zafeer</div>
+        <p class="footer-brand-desc">Helping high-achieving women in tech claim the promotion, the salary, and the seat at the table they have already earned — through identity transformation, not harder work.</p>
       </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 Zafeer. All Rights Reserved.</p>
-        <nav class="footer-legal" aria-label="Legal links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </nav>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <div class="footer-links">
+          <a href="https://zafeer.ca/index.html">Home</a>
+          <a href="https://zafeer.ca/program.html">Program</a>
+          <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
+          <a href="https://zafeer.ca/about.html">About Zaina</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Free Invisible Ceiling Guide</a>
+          <a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <a href="#d4">The D4 Formula</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="footer-contact">
+          <a href="https://www.linkedin.com/in/zaina-warne/" target="_blank" rel="noopener">LinkedIn</a><br>
+          <a href="mailto:coaching@zafeer.ca">coaching@zafeer.ca</a><br><br>
+          Toronto, Ontario<br>Canada
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Zafeer · Zaina Warne. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      toggle.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-    const nav = document.getElementById('site-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 
 </body>
