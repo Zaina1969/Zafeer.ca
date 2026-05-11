@@ -36,7 +36,8 @@
       color: var(--text-dark);
       font-family: 'Jost', sans-serif;
       font-weight: 300;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.8;
       overflow-x: hidden;
     }
 
@@ -94,9 +95,9 @@
     .hero-headline em { font-style: italic; color: var(--burgundy); font-weight: 400; }
     .hero-headline strong { font-weight: 500; }
     .hero-sub {
-      font-size: 1rem;
+      font-size: 1.15rem;
       color: var(--text-mid);
-      line-height: 1.8;
+      line-height: 1.9;
       max-width: 480px;
       margin-bottom: 2.5rem;
     }
@@ -131,33 +132,7 @@
       object-position: center top;
       display: block;
     }
-    .hero-image-badge {
-      position: absolute;
-      bottom: -1.5rem;
-      left: -1.5rem;
-      background: var(--white);
-      border: 0.5px solid var(--border);
-      padding: 1rem 1.25rem;
-      border-radius: 2px;
-      box-shadow: 0 8px 32px rgba(44,24,16,0.1);
-      z-index: 2;
-      max-width: 200px;
-    }
-    .badge-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--text-dark);
-      line-height: 1.5;
-    }
-    .badge-attr {
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      margin-top: 0.5rem;
-    }
+    .hero-image-badge { display: none; }
 
     /* ─────────── TREADMILL TEASE ─────────── */
     .treadmill {
@@ -186,9 +161,9 @@
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1rem; }
     .section-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
     .client-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem; }
-    .client-desc { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 2rem; }
+    .client-desc { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2rem; }
     .client-bullets { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    .client-bullets li { display: flex; gap: 0.875rem; font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+    .client-bullets li { display: flex; gap: 0.875rem; font-size: 1.02rem; color: var(--text-mid); line-height: 1.75; }
     .client-bullets li::before { content: '✦'; color: var(--burgundy); font-size: 0.55rem; flex-shrink: 0; margin-top: 0.55rem; opacity: 0.7; }
     .client-desire { background: var(--white); border: 0.5px solid var(--border); border-radius: 2px; padding: 2.5rem; }
     .client-desire-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; color: var(--text-dark); margin-bottom: 1.5rem; }
@@ -207,7 +182,7 @@
     }
     .ceiling-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .ceiling-text .section-title { margin-bottom: 1.5rem; }
-    .ceiling-body { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.5rem; }
+    .ceiling-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 1.5rem; }
     .ceiling-body strong { color: var(--text-dark); font-weight: 500; }
     .ceiling-visual {
       position: relative;
@@ -268,7 +243,7 @@
     .meet-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--text-dark); line-height: 1.15; margin-bottom: 0.5rem; }
     .meet-headline em { font-style: italic; color: var(--burgundy); font-weight: 400; }
     .meet-tagline { font-size: 0.88rem; color: var(--text-light); margin-bottom: 2rem; font-style: italic; }
-    .meet-body { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.5rem; }
+    .meet-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 1.5rem; }
     .meet-highlight { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; font-style: italic; color: var(--text-dark); border-left: 2px solid var(--burgundy); padding-left: 1.25rem; margin: 1.75rem 0; line-height: 1.6; }
     .meet-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 0.5px solid var(--border); }
     .meet-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--burgundy); line-height: 1; margin-bottom: 0.3rem; }
@@ -286,7 +261,7 @@
     .program-card:hover { border-color: var(--burgundy); box-shadow: 0 4px 24px rgba(107,30,46,0.06); }
     .program-step { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; }
     .program-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.75rem; }
-    .program-card-body { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
+    .program-card-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
     .program-promise { background: var(--burgundy); border-radius: 2px; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     .program-promise-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.5; }
     .program-promise-text strong { font-style: normal; font-weight: 500; }
@@ -300,7 +275,7 @@
     .how-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--burgundy); opacity: 0.15; line-height: 1; margin-bottom: 0.5rem; }
     .how-rule { width: 32px; height: 1px; background: var(--burgundy); opacity: 0.3; margin-bottom: 1.25rem; }
     .how-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.75rem; }
-    .how-body { font-size: 0.87rem; color: var(--text-light); line-height: 1.75; margin-bottom: 1rem; }
+    .how-body { font-size: 1.02rem; color: var(--text-light); line-height: 1.85; margin-bottom: 1rem; }
     .how-link { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); text-decoration: none; border-bottom: 0.5px solid var(--burgundy); padding-bottom: 1px; opacity: 0.8; transition: opacity 0.2s; }
     .how-link:hover { opacity: 1; }
 
@@ -311,11 +286,11 @@
     .check-item { display: flex; gap: 1rem; align-items: flex-start; }
     .check-box { width: 20px; height: 20px; border: 1px solid var(--burgundy); border-radius: 1px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
     .check-box::after { content: '✓'; font-size: 0.65rem; color: var(--burgundy); font-weight: 600; }
-    .check-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+    .check-text { font-size: 1.02rem; color: var(--text-mid); line-height: 1.75; }
     .qualifying-cta { padding-top: 2rem; }
     .qualifying-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 300; color: var(--text-dark); line-height: 1.3; margin-bottom: 1.25rem; }
     .qualifying-cta-title em { font-style: italic; color: var(--burgundy); }
-    .qualifying-body { font-size: 0.9rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 2rem; }
+    .qualifying-body { font-size: 1.02rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2rem; }
 
     /* ─────────── LEAD MAGNET ─────────── */
     .lead-magnet { max-width: 1160px; margin: 0 auto; padding: 6rem 2rem; }
@@ -340,7 +315,7 @@
     .faq-icon::after { width: 1px; height: 12px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     .faq-item.open .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
-    .faq-answer-inner { font-size: 0.88rem; color: var(--text-mid); line-height: 1.8; padding-bottom: 1.5rem; }
+    .faq-answer-inner { font-size: 1.02rem; color: var(--text-mid); line-height: 1.9; padding-bottom: 1.5rem; }
     .faq-answer-inner a { color: var(--burgundy); text-decoration: none; font-weight: 500; }
     .faq-answer-inner a:hover { text-decoration: underline; }
     .faq-answer-inner strong { color: var(--text-dark); font-weight: 500; }
@@ -352,7 +327,7 @@
     .final-rule { width: 40px; height: 0.5px; background: var(--burgundy); margin: 0 auto 2.5rem; opacity: 0.4; }
     .final-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1.25rem; }
     .final-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
-    .final-body { font-size: 0.93rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 2.5rem; }
+    .final-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2.5rem; }
     .final-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     /* ─────────── FOOTER ─────────── */
@@ -475,7 +450,7 @@
   <!-- ═══ TREADMILL TEASE ═══ -->
   <div class="treadmill">
     <div class="treadmill-inner">
-      <p>You've been running hard.<br><strong>But what if the track itself is the problem?</strong></p>
+      <p>You have been running on a Treadmill.<br><strong>But the Treadmill will not get you where you want to be.</strong></p>
       <div class="treadmill-rule"></div>
       <div class="treadmill-sub">There is a different way to show up.</div>
     </div>
