@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success Without Sacrifice | Secure Your Spot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream:         #FAF8F3;
+    --deep:          #1A1210;
+    --burgundy:      #6B1E2E;
+    --burgundy-mid:  #8C2D40;
+    --burgundy-pale: #F5EAEC;
+    --gold:          #C49A5A;
+    --gold-light:    #E8D5B0;
+    --muted:         #6B5F5A;
+    --border:        rgba(107,30,46,0.18);
+    --border-gold:   rgba(196,154,90,0.28);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--deep);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  #payment-page  { display: block; }
+  #thankyou-page { display: none;  }
+
+  /* URGENCY BANNER */
+  .urgency-banner {
+    background: var(--burgundy);
+    color: #f5e8eb;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .urgency-banner strong { font-weight: 500; color: #fff; }
+
+  /* PAGE HEADER */
+  .page-header {
+    text-align: center;
+    padding: 52px 24px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .brand-line {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 54px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--deep);
+    margin-bottom: 20px;
+  }
+  .page-title em { font-style: italic; color: var(--burgundy); }
+
+  .page-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 2.2vw, 18px);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+  .page-subtitle strong {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--deep);
+  }
+
+
+
+  /* MAIN */
+  .main-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 24px 80px;
+  }
+
+  /* COUNTDOWN — sits directly below the divider, no extra gap */
+  .countdown-wrap {
+    background: var(--burgundy-pale);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .countdown-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    flex-shrink: 0;
+  }
+  .countdown-timer { display: flex; gap: 10px; align-items: center; }
+  .countdown-unit  { text-align: center; }
+  .countdown-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--burgundy);
+    line-height: 1;
+    display: block;
+    min-width: 34px;
+  }
+  .countdown-unit-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    display: block;
+    margin-top: 2px;
+  }
+  .countdown-sep {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--burgundy);
+    opacity: 0.4;
+    margin-bottom: 10px;
+  }
+
+  /* PRICE CARD */
+  .price-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 36px;
+    background: #fff;
+  }
+  .price-card-header {
+    background: var(--burgundy);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .price-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #e8c4cc;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .price-current {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1;
+  }
+  .price-currency {
+    font-size: 22px;
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+    color: #e8c4cc;
+  }
+  .price-cad {
+    font-size: 12px;
+    color: #e8c4cc;
+    display: block;
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+  }
+  .savings-badge { text-align: right; }
+  .savings-was {
+    font-size: 13px;
+    color: #e8c4cc;
+    text-decoration: line-through;
+    opacity: 0.75;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .savings-amount {
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 2px;
+    display: inline-block;
+    letter-spacing: 0.03em;
+  }
+  .deadline-line {
+    font-size: 11px;
+    color: #e8c4cc;
+    opacity: 0.8;
+    display: block;
+    margin-top: 7px;
+    letter-spacing: 0.04em;
+  }
+  .price-card-body { padding: 28px 32px; }
+  .included-heading {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 20px;
+  }
+  .included-list { list-style: none; display: grid; gap: 12px; }
+  .included-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--deep);
+    line-height: 1.55;
+  }
+  .check-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--burgundy);
+  }
+
+  /* PAYMENT */
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    color: var(--deep);
+  }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+
+  .payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .payment-option {
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+  }
+  .payment-option:hover    { border-color: var(--burgundy); background: var(--burgundy-pale); }
+  .payment-option.selected { border-color: var(--burgundy); background: var(--burgundy-pale); }
+  .payment-option input[type="radio"] { accent-color: var(--burgundy); width: 16px; height: 16px; flex-shrink: 0; }
+  .payment-option-label { font-size: 14px; font-weight: 400; color: var(--deep); }
+  .payment-option-sub   { font-size: 12px; color: var(--muted); display: block; margin-top: 2px; }
+
+  #payment-buttons         { display: none; }
+  #payment-buttons.visible { display: block; }
+
+  .proceed-btn {
+    width: 100%;
+    background: var(--burgundy);
+    color: #fff;
+    border: none;
+    padding: 18px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .proceed-btn:hover  { background: var(--burgundy-mid); }
+  .proceed-btn:active { transform: scale(0.99); }
+  .proceed-btn.paypal-btn       { background: #003087; }
+  .proceed-btn.paypal-btn:hover { background: #002472; }
+
+  .secure-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    line-height: 1.5;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-strip {
+    margin-top: 48px;
+    border-top: 1px solid var(--border-gold);
+    padding-top: 40px;
+  }
+  .testimonial-label {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .testimonial-card {
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    padding: 22px;
+    background: #fff;
+  }
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--deep);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .testimonial-result {
+    font-size: 11px;
+    color: var(--burgundy);
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .testimonial-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .testimonial-role { font-size: 11px; color: var(--muted); display: block; margin-top: 3px; }
+
+  /* ════ THANK YOU PAGE ════ */
+  #thankyou-page { background: var(--cream); min-height: 100vh; }
+
+  .thankyou-hero {
+    background: var(--burgundy);
+    text-align: center;
+    padding: 72px 24px 60px;
+  }
+  .thankyou-icon {
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+  }
+  .thankyou-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 5vw, 50px);
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .thankyou-title em { font-style: italic; color: var(--gold-light); }
+  .thankyou-subtitle {
+    font-size: 15px;
+    color: #e8c4cc;
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .thankyou-body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 52px 24px 80px;
+  }
+  .next-steps-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .next-steps-sub { font-size: 13px; color: var(--muted); text-align: center; margin-bottom: 36px; }
+
+  .step-list  { display: grid; gap: 22px; margin-bottom: 44px; }
+  .step-item  { display: flex; gap: 20px; align-items: flex-start; }
+  .step-number {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--burgundy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--burgundy);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-content-title { font-size: 15px; font-weight: 500; color: var(--deep); margin-bottom: 4px; }
+  .step-content-desc  { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  .book-call-btn {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    background: var(--burgundy);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .book-call-btn:hover { background: var(--burgundy-mid); }
+
+  .book-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  .zaina-sign {
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border-gold);
+  }
+  .zaina-sign p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 420px;
+    margin: 0 auto 16px;
+  }
+  .zaina-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--burgundy);
+    font-weight: 300;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 560px) {
+    .payment-options   { grid-template-columns: 1fr; }
+    .testimonial-grid  { grid-template-columns: 1fr; }
+    .price-card-header { flex-direction: column; padding: 22px 18px; }
+    .price-card-body   { padding: 22px 18px; }
+    .savings-badge     { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     PAYMENT PAGE
+════════════════════════════════════════ -->
+<div id="payment-page">
+
+  <div class="urgency-banner">
+    Price increases to <strong>$5,000 CAD on Monday, June 16.</strong>&nbsp; You are saving $2,000 by securing your spot today.
+  </div>
+
+  <header class="page-header">
+    <p class="brand-line">Zafeer &nbsp;·&nbsp; Zaina Warne</p>
+    <h1 class="page-title">Success Without<br><em>Sacrifice</em></h1>
+    <p class="page-subtitle">You don't negotiate your way to power.<br>You become powerful first &mdash; <strong>and negotiate from there.</strong></p>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Countdown: expires end of Sunday June 15 Pacific time -->
+    <div class="countdown-wrap">
+      <span class="countdown-label">Price increase in</span>
+      <div class="countdown-timer">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">--</span>
+          <span class="countdown-unit-label">days</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">--</span>
+          <span class="countdown-unit-label">hrs</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-mins">--</span>
+          <span class="countdown-unit-label">min</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-secs">--</span>
+          <span class="countdown-unit-label">sec</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price Card -->
+    <div class="price-card">
+      <div class="price-card-header">
+        <div>
+          <span class="price-label">Your investment today</span>
+          <div class="price-current"><span class="price-currency">$</span>3,000</div>
+          <span class="price-cad">Canadian Dollars &nbsp;·&nbsp; One-time payment</span>
+        </div>
+        <div class="savings-badge">
+          <span class="savings-was">$5,000 CAD after June 15</span>
+          <span class="savings-amount">You save $2,000</span>
+          <span class="deadline-line">Offer ends Sunday, June 15</span>
+        </div>
+      </div>
+      <div class="price-card-body">
+        <p class="included-heading">What is included</p>
+        <ul class="included-list">
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            12 private 1-on-1 sessions with Zaina, one per week, 60 minutes each, fully personalized to your situation, your organization, and your invisible ceiling
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Done-at-home exercises designed to anchor each shift into your daily life
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Unlimited email support between sessions throughout the full 12 weeks
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Structured progress reviews at weeks 4, 8, and 12 to keep you on track and celebrate every milestone
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Your Custom Resilience Blueprint, a personal roadmap built around the woman you are becoming. Not a worksheet. A transformation document you carry forward for life.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment Options -->
+    <div>
+      <h2 class="section-heading">Choose your payment method</h2>
+      <p class="section-sub">Select how you would like to complete your payment securely.</p>
+
+      <div class="payment-options">
+        <label class="payment-option" id="opt-stripe">
+          <input type="radio" name="payment" value="stripe" onchange="selectPayment('stripe')">
+          <div>
+            <span class="payment-option-label">Credit or Debit Card</span>
+            <span class="payment-option-sub">Secure checkout via Stripe</span>
+          </div>
+        </label>
+        <label class="payment-option" id="opt-paypal">
+          <input type="radio" name="payment" value="paypal" onchange="selectPayment('paypal')">
+          <div>
+            <span class="payment-option-label">PayPal</span>
+            <span class="payment-option-sub">Pay with your PayPal account</span>
+          </div>
+        </label>
+      </div>
+
+      <div id="payment-buttons">
+
+        <!--
+          ══════════════════════════════════════════════════════════
+          STRIPE BUTTON
+          Replace  YOUR_STRIPE_PAYMENT_LINK_HERE  with the URL from
+          Stripe → Payment Links (e.g. https://buy.stripe.com/xxxx)
+          ══════════════════════════════════════════════════════════
+        -->
+        <button class="proceed-btn" id="stripe-btn"
+          onclick="window.location.href='https://buy.stripe.com/8x2cN6eV0fXA3DX11Q0oM00'"
+          style="display:none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Complete Payment &mdash; $3,000 CAD
+        </button>
+
+        <!--
+          ══════════════════════════════════════════════════════════
+          PAYPAL BUTTON
+          Replace  YOUR_PAYPAL_PAYMENT_LINK_HERE  with the URL from
+          PayPal → Payment Links (e.g. https://paypal.com/ncp/payment/xxxx)
+          ══════════════════════════════════════════════════════════
+        -->
+        <button class="proceed-btn paypal-btn" id="paypal-btn"
+          onclick="window.location.href='https://www.paypal.com/ncp/payment/9NNRUBTGTTCAQ'"
+          style="display:none;">
+          Pay with PayPal &mdash; $3,000 CAD
+        </button>
+
+        <p class="secure-note">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.45;flex-shrink:0"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Payments are encrypted and processed securely. Zafeer does not store your card details.
+        </p>
+      </div>
+    </div>
+
+    <!-- Testimonials — pulled verbatim from zafeer.ca/testimonials.html -->
+    <div class="testimonial-strip">
+      <p class="testimonial-label">Women who made this decision</p>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I spent 18 years waiting for someone to hand me the promotion I deserved. Zaina helped me realize I had outgrown the stage — not failed it. Three months later I walked into a VP role at a new organization. Not because I worked harder. Because I finally knew exactly who I was."</p>
+          <p class="testimonial-result">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Promoted to VP Cybersecurity in 3 months
+          </p>
+          <span class="testimonial-name">Helen</span>
+          <span class="testimonial-role">Senior Director, Technology (Banking) &rarr; VP Cybersecurity</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"My career kept demanding more while giving back less. I had three young children and I was running on empty. Zaina helped me realize I had outgrown the stage — not failed it. Six months later I had my own IT Consulting firm, making double the income and having much more control over my time and energy."</p>
+          <p class="testimonial-result">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Launched IT Consulting firm in 6 months — double the income
+          </p>
+          <span class="testimonial-name">Zina</span>
+          <span class="testimonial-role">High Performer &rarr; Entrepreneur, Technology</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"My own boss believed in me enough to encourage me to apply. The promotion still went to someone else. Working with Zaina, I finally understood that success doesn't mean work more and achieve more. It means live more. When I made that shift, everything fell into place — the Director title, the work-life balance, and even a new relationship."</p>
+          <p class="testimonial-result">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Promoted to Director of Technology
+          </p>
+          <span class="testimonial-name">Mar</span>
+          <span class="testimonial-role">IT Manager &rarr; Director, Technology</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I was racing between a demanding job, my family, and my aging parents — giving everything to everyone except myself. Zaina helped me get clear on my priorities and build boundaries that actually held. For the first time, I learned to speak up and voice my opinion without feeling guilty or pushy. Eight months later, I was promoted to Head of QA."</p>
+          <p class="testimonial-result">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Promoted to Head of QA in 8 months
+          </p>
+          <span class="testimonial-name">May</span>
+          <span class="testimonial-role">Senior Professional &rarr; Head of QA, Manufacturing</span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     THANK YOU PAGE
+════════════════════════════════════════ -->
+<div id="thankyou-page">
+
+  <div class="thankyou-hero">
+    <div class="thankyou-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1 class="thankyou-title">You did it.<br><em>Welcome.</em></h1>
+    <p class="thankyou-subtitle">Your payment has been received. This is the moment everything begins to shift.</p>
+  </div>
+
+  <div class="thankyou-body">
+
+    <h2 class="next-steps-heading">Your next steps</h2>
+    <p class="next-steps-sub">Here is exactly what happens from here.</p>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div>
+          <p class="step-content-title">Book your welcome call</p>
+          <p class="step-content-desc">This is where we begin. Use the button below to pick a time that works for you. Come as you are. There is nothing to prepare.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div>
+          <p class="step-content-title">Check your inbox</p>
+          <p class="step-content-desc">A confirmation email is on its way with your receipt and a few things to know before we meet. If it does not arrive within a few minutes, please check your spam folder.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div>
+          <p class="step-content-title">Show up for yourself</p>
+          <p class="step-content-desc">The only thing you need to bring to this work is the willingness to stop waiting for permission. Everything else, we build together over the next 12 weeks.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" class="book-call-btn">
+      Book Your Welcome Call
+    </a>
+    <p class="book-note">Questions before your call? Reach Zaina at <a href="mailto:zaina@zafeer.ca" style="color:var(--burgundy);text-decoration:none;">zaina@zafeer.ca</a></p>
+
+    <div class="zaina-sign">
+      <p>You did not get here by accident. You got here because some part of you already knows it is time. I am honoured to walk this next chapter with you.</p>
+      <span class="zaina-signature">Zaina</span>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  // Countdown to end of Sunday June 15 (Pacific time)
+  function updateCountdown() {
+    const deadline = new Date('2025-06-15T23:59:59-07:00');
+    const diff = deadline - new Date();
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent  = '0';
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-mins').textContent  = '00';
+      document.getElementById('cd-secs').textContent  = '00';
+      return;
+    }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000)  / 60000);
+    const secs  = Math.floor((diff % 60000)    / 1000);
+    document.getElementById('cd-days').textContent  = days;
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Payment method selection
+  function selectPayment(method) {
+    document.getElementById('opt-stripe').classList.toggle('selected', method === 'stripe');
+    document.getElementById('opt-paypal').classList.toggle('selected', method === 'paypal');
+    document.getElementById('payment-buttons').classList.add('visible');
+    document.getElementById('stripe-btn').style.display = method === 'stripe' ? 'flex' : 'none';
+    document.getElementById('paypal-btn').style.display = method === 'paypal' ? 'flex' : 'none';
+  }
+</script>
+
+</body>
+</html>
