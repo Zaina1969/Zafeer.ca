@@ -670,7 +670,7 @@
         </div>
       </div>
       <button class="enroll-btn-inline"
-        onclick="window.location.href='https://buy.stripe.com/8x2cN6eV0fXA3DX11Q0oM00'">
+        onclick="document.getElementById('payment-plans').scrollIntoView({behavior:'smooth'})">
         Enroll Me Now
       </button>
     </div>
@@ -717,7 +717,7 @@
     </div>
 
     <!-- PAYMENT PLAN SELECTOR -->
-    <div class="payment-plan-section">
+    <div class="payment-plan-section" id="payment-plans">
       <h2 class="payment-plan-heading">Choose your investment option</h2>
       <p class="payment-plan-sub">All options include the full 12-week program. Select what works best for you.</p>
 
@@ -863,7 +863,7 @@
 
     <!-- ENROLL ME NOW — bottom button after success stories -->
     <div class="enroll-section" style="margin-top: 48px;">
-      <button class="enroll-btn-main" onclick="enrollNow()">
+      <button class="enroll-btn-main" onclick="document.getElementById('payment-plans').scrollIntoView({behavior:'smooth'})">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         Enroll Me Now
       </button>
