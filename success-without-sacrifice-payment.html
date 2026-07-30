@@ -625,10 +625,6 @@
 <!-- PAYMENT PAGE -->
 <div id="payment-page">
 
-  <div class="urgency-banner">
-    Price increases to <strong>$5,000 CAD on Monday, June 15.</strong>&nbsp; You are saving $2,000 by securing your spot today.
-  </div>
-
   <!-- HEADER: text left, photo right -->
   <header class="page-header">
     <div class="header-text">
@@ -643,77 +639,13 @@
 
   <main class="main-container">
 
-    <!-- COUNTDOWN + ENROLL BUTTON (same row) -->
-    <div class="countdown-row">
-      <div class="countdown-wrap">
-        <span class="countdown-label">Price increase in</span>
-        <div class="countdown-timer">
-          <div class="countdown-unit">
-            <span class="countdown-num" id="cd-days">--</span>
-            <span class="countdown-unit-label">days</span>
-          </div>
-          <span class="countdown-sep">:</span>
-          <div class="countdown-unit">
-            <span class="countdown-num" id="cd-hours">--</span>
-            <span class="countdown-unit-label">hrs</span>
-          </div>
-          <span class="countdown-sep">:</span>
-          <div class="countdown-unit">
-            <span class="countdown-num" id="cd-mins">--</span>
-            <span class="countdown-unit-label">min</span>
-          </div>
-          <span class="countdown-sep">:</span>
-          <div class="countdown-unit">
-            <span class="countdown-num" id="cd-secs">--</span>
-            <span class="countdown-unit-label">sec</span>
-          </div>
-        </div>
-      </div>
-      <button class="enroll-btn-inline"
+    <!-- ENROLL ME NOW top button — centered -->
+    <div class="enroll-section" style="margin-bottom: 28px;">
+      <button class="enroll-btn-main"
         onclick="document.getElementById('payment-plans').scrollIntoView({behavior:'smooth'})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         Enroll Me Now
       </button>
-    </div>
-
-    <!-- PRICE CARD -->
-    <div class="price-card">
-      <div class="price-card-header">
-        <div>
-          <span class="price-label">Your investment today</span>
-          <div class="price-current"><span class="price-currency">$</span>3,000</div>
-          <span class="price-cad">Canadian Dollars &nbsp;·&nbsp; One-time payment</span>
-        </div>
-        <div class="savings-badge">
-          <span class="savings-was">$5,000 CAD after June 15</span>
-          <span class="savings-amount">You save $2,000</span>
-          <span class="deadline-line">Offer ends Monday, June 15</span>
-        </div>
-      </div>
-      <div class="price-card-body">
-        <p class="included-heading">What this experience gives you that no other investment has</p>
-        <ul class="included-list">
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>12 weeks of private, undivided attention</strong> — not group coaching, not a course, not a template. Every session is built around your specific invisible ceiling, your organization, and the exact moment you are in right now. You will never sit across from someone reading from a framework that was not designed for you.</span>
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Integration work between sessions</strong> — because real change does not happen in a coaching call. It happens in the moments after. Each exercise is designed to make the shift feel like yours, not something borrowed from a workbook.</span>
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Direct access to Zaina throughout</strong> — when the hard conversation happens on a Tuesday and your next session is not until Friday, you will not be navigating it alone. Unlimited email support means the work continues even when we are not in session.</span>
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Three structured points of reflection</strong> — at weeks 4, 8, and 12, we pause and look at how far you have come. Not to check boxes. To make sure the woman who finishes this program is unrecognizable to the one who started it.</span>
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span><strong>Your Custom Resilience Blueprint</strong> — this is not a summary of our sessions. It is a living document built around who you are becoming. Long after the 12 weeks end, it remains your personal architecture for how you lead, negotiate, and show up. No other coach will build you this. Because no other coach has spent 12 weeks inside your specific story.</span>
-          </li>
-        </ul>
-      </div>
     </div>
 
     <!-- PAYMENT PLAN SELECTOR -->
@@ -727,7 +659,7 @@
         <div class="plan-option selected" id="plan-full" onclick="selectPlan('full')">
           <span class="plan-badge">Best Value</span>
           <span class="plan-title">Pay in Full</span>
-          <span class="plan-amount"><sup>$</sup>3,000</span>
+          <span class="plan-amount"><sup>$</sup>5,000</span>
           <span class="plan-per">one-time payment</span>
           <span class="plan-total">CAD &nbsp;·&nbsp; Save the most</span>
         </div>
@@ -735,19 +667,46 @@
         <!-- 2 Payments -->
         <div class="plan-option" id="plan-2pay" onclick="selectPlan('2pay')">
           <span class="plan-title">2 Payments</span>
-          <span class="plan-amount"><sup>$</sup>1,555</span>
+          <span class="plan-amount"><sup>$</sup>2,600</span>
           <span class="plan-per">per month &nbsp;·&nbsp; 2 months</span>
-          <span class="plan-total">CAD &nbsp;·&nbsp; Total $3,110</span>
+          <span class="plan-total">CAD &nbsp;·&nbsp; Total $5,200</span>
         </div>
 
         <!-- 3 Payments -->
         <div class="plan-option" id="plan-3pay" onclick="selectPlan('3pay')">
           <span class="plan-title">3 Payments</span>
-          <span class="plan-amount"><sup>$</sup>1,075</span>
+          <span class="plan-amount"><sup>$</sup>1,790</span>
           <span class="plan-per">per month &nbsp;·&nbsp; 3 months</span>
-          <span class="plan-total">CAD &nbsp;·&nbsp; Total $3,225</span>
+          <span class="plan-total">CAD &nbsp;·&nbsp; Total $5,370</span>
         </div>
 
+      </div>
+
+      <!-- WHAT IS INCLUDED -->
+      <div style="margin: 36px 0;">
+        <p class="included-heading">What is included</p>
+        <ul class="included-list">
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            12 private 1-on-1 sessions with Zaina, one per week, 60 minutes each, fully personalized to your situation, your organization, and your invisible ceiling
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Done-at-home exercises designed to anchor each shift into your daily life
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Unlimited email support between sessions throughout the full 12 weeks
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Structured progress reviews at weeks 4, 8, and 12 to keep you on track and celebrate every milestone
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Your Custom Resilience Blueprint, a personal roadmap built around the woman you are becoming. Not a worksheet. A transformation document you carry forward for life.
+          </li>
+        </ul>
       </div>
 
       <!-- Enroll button — updates based on selection -->
@@ -934,9 +893,9 @@
 <script>
   // Payment plan selection
   const plans = {
-    full:  { url: 'https://buy.stripe.com/8x2cN6eV0fXA3DX11Q0oM00', label: 'Enroll Me Now — Pay in Full' },
-    '2pay':{ url: 'https://buy.stripe.com/7sYcN6bIO4eS6Q939Y0oM01', label: 'Enroll Me Now — 2 Payments' },
-    '3pay':{ url: 'https://buy.stripe.com/bJe6oIeV0cLob6pdOC0oM02', label: 'Enroll Me Now — 3 Payments' }
+    full:  { url: 'https://buy.stripe.com/fZubJ2cMS5iW8YhcKy0oM03', label: 'Enroll Me Now — Pay in Full' },
+    '2pay':{ url: 'https://buy.stripe.com/14AbJ29AGh1Ea2lbGu0oM04', label: 'Enroll Me Now — 2 Payments of $2,600' },
+    '3pay':{ url: 'https://buy.stripe.com/4gM7sM9AG7r4a2l4e20oM05', label: 'Enroll Me Now — 3 Payments of $1,790' }
   };
   let selectedPlan = 'full';
 
@@ -953,28 +912,7 @@
     window.location.href = plans[selectedPlan].url;
   }
 
-  // Countdown to July 27 at 12:00 PM PDT
-  function updateCountdown() {
-    const deadline = new Date('2026-07-27T12:00:00-07:00');
-    const diff = deadline - new Date();
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent  = '0';
-      document.getElementById('cd-hours').textContent = '00';
-      document.getElementById('cd-mins').textContent  = '00';
-      document.getElementById('cd-secs').textContent  = '00';
-      return;
-    }
-    const days  = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins  = Math.floor((diff % 3600000)  / 60000);
-    const secs  = Math.floor((diff % 60000)    / 1000);
-    document.getElementById('cd-days').textContent  = days;
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+
 </script>
 
 </body>
