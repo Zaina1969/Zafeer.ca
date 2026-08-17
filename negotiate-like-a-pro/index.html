@@ -647,6 +647,11 @@
       window.location.assign(getCheckoutLink());
     });
 
+    window.addEventListener('pageshow', () => {
+      checkout.disabled = false;
+      updateOrder();
+    });
+
     updateOrder();
   </script>
 </body>
