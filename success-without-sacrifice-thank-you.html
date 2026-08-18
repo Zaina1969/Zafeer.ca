@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome to Success Without Sacrifice™ | Zafeer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #4A1220;
+      --burgundy-mid: #6B1E2E;
+      --cream: #FAF8F3;
+      --warm-cream: #FFEFDD;
+      --gold: #C49A5A;
+      --gold-light: #E4BE83;
+      --deep: #2E1F1A;
+      --muted: #6B5F5A;
+      --border-gold: rgba(196,154,90,.42);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--deep);
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+    header {
+      min-height: 72px;
+      padding: 0 42px;
+      background: var(--burgundy);
+      border-bottom: 1px solid rgba(196,154,90,.28);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      color: var(--warm-cream);
+      font: 400 25px 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: .05em;
+      text-decoration: none;
+    }
+    .movement {
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .hero {
+      background: var(--burgundy);
+      text-align: center;
+      padding: 76px 24px 68px;
+    }
+    .mark {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 24px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50%;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 auto 18px;
+      color: #fff;
+      font: 300 clamp(42px,6vw,62px)/1.08 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -.025em;
+    }
+    h1 em { color: var(--gold-light); font-weight: 300; }
+    .hero-copy {
+      max-width: 540px;
+      margin: 0 auto;
+      color: #e8c4cc;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 58px 24px 80px;
+    }
+    .celebration {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .celebration h2,
+    .next h2 {
+      margin: 0 0 14px;
+      color: var(--deep);
+      font: 300 34px/1.2 'Cormorant Garamond', Georgia, serif;
+    }
+    .celebration p {
+      max-width: 580px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .next {
+      padding: 36px;
+      background: var(--warm-cream);
+      border: 1px solid var(--border-gold);
+    }
+    .next > p {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .steps { display: grid; gap: 24px; }
+    .step { display: grid; grid-template-columns: 42px 1fr; gap: 16px; }
+    .number {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--burgundy-mid);
+      border-radius: 50%;
+      color: var(--burgundy-mid);
+      display: grid;
+      place-items: center;
+      font: 400 18px 'Cormorant Garamond', Georgia, serif;
+    }
+    .step h3 {
+      margin: 2px 0 5px;
+      color: var(--deep);
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .contact {
+      margin: 26px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .contact a { color: var(--burgundy-mid); font-weight: 500; }
+    .note {
+      margin-top: 52px;
+      padding-top: 38px;
+      border-top: 1px solid var(--border-gold);
+      text-align: center;
+    }
+    .note p {
+      max-width: 520px;
+      margin: 0 auto 16px;
+      color: var(--muted);
+      font: italic 20px/1.65 'Cormorant Garamond', Georgia, serif;
+    }
+    .signature {
+      color: var(--burgundy-mid);
+      font: italic 30px 'Cormorant Garamond', Georgia, serif;
+    }
+    footer {
+      padding: 34px 24px;
+      background: var(--burgundy);
+      color: rgba(255,239,221,.72);
+      text-align: center;
+      font-size: 12px;
+    }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    @media (max-width: 640px) {
+      header { min-height: 66px; padding: 0 20px; }
+      .movement { display: none; }
+      .hero { padding: 58px 22px 54px; }
+      main { padding: 44px 20px 64px; }
+      .next { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="https://zafeer.ca">Zafeer</a>
+    <div class="movement">Leading the Quiet Authority Movement</div>
+  </header>
+
+  <section class="hero">
+    <div class="mark">✓</div>
+    <p class="eyebrow">Welcome to Success Without Sacrifice™</p>
+    <h1>Your place is confirmed.<br><em>Welcome.</em></h1>
+    <p class="hero-copy">This is a meaningful decision. Take a moment to celebrate it.</p>
+  </section>
+
+  <main>
+    <section class="celebration">
+      <h2>You chose a different way forward.</h2>
+      <p>You have made a significant investment in the way you want to lead and live. You are not leaving your ambition behind. You are choosing to pursue it without abandoning yourself in the process. That deserves to be acknowledged.</p>
+    </section>
+
+    <section class="next">
+      <h2>What happens next</h2>
+      <p>Your place is confirmed. Here is what you can expect from me.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="number">1</div>
+          <div>
+            <h3>Let this decision land</h3>
+            <p>There is nothing to prepare today. Give yourself permission to enjoy the decision you just made.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">2</div>
+          <div>
+            <h3>Watch for my personal email</h3>
+            <p>You will hear from me personally within one business day with everything you need to schedule our welcome conversation and begin.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">3</div>
+          <div>
+            <h3>Your receipt will arrive separately</h3>
+            <p>Stripe will send your payment receipt to the email address used at checkout.</p>
+          </div>
+        </div>
+      </div>
+      <p class="contact">Questions before you hear from me? Email <a href="mailto:zaina@zafeer.ca">zaina@zafeer.ca</a>.</p>
+    </section>
+
+    <section class="note">
+      <p>I am delighted to welcome you. We will begin with what is already true, then build the certainty to stand behind the choices that come next.</p>
+      <span class="signature">Zaina</span>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Zafeer by Zaina Warne · <a href="https://zafeer.ca">zafeer.ca</a>
+  </footer>
+</body>
+</html>
