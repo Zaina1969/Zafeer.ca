@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Success Stories | Zaina Warne — Success Without Sacrifice</title>
-  <meta name="description" content="Real women. Real transformations. Read how high-achieving women in tech claimed their promotion, title, and salary with Zaina Warne's coaching." />
+  <title>Success Stories, Success Without Sacrifice | Zaina Warne</title>
+  <meta name="description" content="Real women. Real transformations. Read how high-achieving women in corporate leadership and tech claimed their promotion, title, and salary with Zaina Warne's coaching." />
   <meta name="robots" content="index, follow" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:        #E8DDD0;
+      --cream:        #FFEFDD;
       --cream-mid:    #DDD0C0;
       --cream-dark:   #C8B8A4;
       --burgundy:     #6B1E2E;
       --burgundy-lt:  #8B3040;
       --burgundy-pale:#F2EAE4;
-      --text-dark:    #2C1810;
-      --text-mid:     #5A3A2A;
+      --text-dark:    #2E1F1A;
+      --text-mid:     #6B5F5A;
       --text-light:   #8C6A56;
       --white:        #FAF7F4;
       --border:       rgba(107,30,46,0.13);
+      --border-md:    rgba(107,30,46,0.22);
+      --gold:         #C49A5A;
+      --gold-muted:   #BFA888;
+      --gray-cream:   #E8DDD0;
     }
 
     html { scroll-behavior: smooth; }
@@ -42,13 +46,11 @@
     .nav-links { display: flex; align-items: center; gap: 2rem; }
     .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--burgundy); }
-    .nav-links .nav-book { padding: 0.6rem 1.4rem; border: 1px solid var(--burgundy); color: var(--burgundy); border-radius: 1px; transition: background 0.2s, color 0.2s; }
-    .nav-links .nav-book:hover { background: var(--burgundy); color: var(--cream); }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--burgundy); }
 
     /* ── BUTTONS ── */
-    .btn-primary { display: inline-block; padding: 0.95rem 2rem; background: var(--burgundy); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, transform 0.15s; }
+    .btn-primary { display: inline-block; padding: 0.95rem 2rem; background: var(--burgundy); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
     .btn-primary:hover { background: var(--burgundy-lt); transform: translateY(-1px); }
     .btn-secondary { display: inline-block; padding: 0.95rem 2rem; background: transparent; color: var(--burgundy); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; border: 1px solid var(--burgundy); transition: background 0.2s, color 0.2s; }
     .btn-secondary:hover { background: var(--burgundy); color: var(--cream); }
@@ -56,8 +58,8 @@
     /* ── HERO ── */
     .hero { padding: 2rem 2rem 1.75rem; text-align: center; border-bottom: 0.5px solid var(--border); }
     .hero-inner { max-width: 680px; margin: 0 auto; }
-    .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
-    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 36px; height: 0.5px; background: var(--burgundy); opacity: 0.5; }
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 36px; height: 0.5px; background: var(--gold-muted); opacity: 0.7; }
     .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 300; color: var(--text-dark); line-height: 1.08; margin-bottom: 0.5rem; }
     .hero h1 em { font-style: italic; color: var(--burgundy); font-weight: 400; }
     .hero-rule { width: 50px; height: 0.5px; background: var(--burgundy); margin: 0.75rem auto; opacity: 0.35; }
@@ -89,7 +91,7 @@
     .story-card:nth-child(even) .story-image { order: 2; }
     .story-card:nth-child(even) .story-content { order: 1; }
 
-    .story-image { position: relative; overflow: hidden; }
+    .story-image { position: relative; overflow: hidden; background: var(--gray-cream); }
     .story-image img {
       width: 100%;
       height: 100%;
@@ -159,12 +161,12 @@
     .final-cta-inner { max-width: 640px; margin: 0 auto; }
     .final-rule { width: 40px; height: 0.5px; background: var(--burgundy); margin: 0 auto 2.5rem; opacity: 0.4; }
     .final-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1.25rem; }
-    .final-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .final-title em { font-style: italic; color: var(--gold-muted); font-weight: 400; }
     .final-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2.5rem; }
     .final-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
-    footer { border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
+    footer { background: var(--gray-cream); border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
     .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; margin-top: 0.75rem; max-width: 260px; }
     .footer-col-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 1.25rem; }
@@ -217,7 +219,6 @@
         <a href="https://zafeer.ca/program.html">Program</a>
         <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
         <a href="https://zafeer.ca/about.html">About</a>
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="nav-book">Book a Call</a>
       </div>
       <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -236,7 +237,7 @@
 
   <!-- PATTERN LINE -->
   <div class="pattern">
-    <p>"Different women. Different circumstances.<br><strong>One pattern underneath all of it.</strong><br>They stopped proving their worth — and started claiming it."</p>
+    <p>"Different women. Different circumstances.<br><strong>One pattern underneath all of it.</strong><br>They stopped proving their worth and started claiming it."</p>
   </div>
 
   <!-- STORIES -->
@@ -247,7 +248,7 @@
       <div class="story-image">
         <img src="helen2.png" alt="Helen" style="object-position: center 15%;" />
         <div class="story-image-overlay">
-          <div class="story-result">VP Cybersecurity · 3 months</div>
+          <div class="story-result">VP Cybersecurity Role · 3 Months</div>
         </div>
       </div>
       <div class="story-content">
@@ -255,8 +256,26 @@
         <div class="story-creds">Senior Director, Technology (Banking) → VP Cybersecurity</div>
         <div class="story-industry">Financial Services · Technology</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"I spent 18 years waiting for someone to hand me the promotion I deserved. Zaina helped me see that I didn't need to prove my worth anymore. It is already done. I needed to negotiate my advancement from a place of power. Three months later, I was promoted to VP."</div>
-        <div class="story-outcome">Promoted to VP Cybersecurity in 3 months</div>
+        <div class="story-quote">"I spent eighteen years waiting for someone at my own company to hand me the opening I was certain I had already earned. Zaina helped me see I had confused loyalty with limitation, and taught me how to negotiate from a place of power instead of hoping to be noticed. Three months later, I accepted a VP Cybersecurity role with a different organization in banking."</div>
+        <div class="story-outcome">Accepted VP Cybersecurity role in 3 months</div>
+      </div>
+    </div>
+
+    <!-- NATALIE -->
+    <div class="story-card fade-up">
+      <div class="story-image">
+        <img src="natalie.jpg" alt="Natalie" style="object-position: center top;" />
+        <div class="story-image-overlay">
+          <div class="story-result">Head of PMO · Within a Year</div>
+        </div>
+      </div>
+      <div class="story-content">
+        <div class="story-name">Natalie</div>
+        <div class="story-creds">Seasoned IT Program Manager → Head of PMO</div>
+        <div class="story-industry">Technology</div>
+        <div class="story-divider"></div>
+        <div class="story-quote">"I believed my advancement depended on managing difficult bosses and impressing the right people. I rehearsed every sentence before I said it and waited until I felt completely ready to speak. Zaina helped me see I wasn't waiting for a better boss. I was waiting for permission. I stopped rehearsing and started contributing before I felt ready, and people began experiencing me differently once I stopped treating every idea like something I needed permission to share."</div>
+        <div class="story-outcome">Promoted to Head of PMO within a year</div>
       </div>
     </div>
 
@@ -265,7 +284,7 @@
       <div class="story-image">
         <img src="mar.png" alt="Mar" style="object-position: center top;" />
         <div class="story-image-overlay">
-          <div class="story-result">Director, Technology</div>
+          <div class="story-result">Director of Technology · 18 Months</div>
         </div>
       </div>
       <div class="story-content">
@@ -273,8 +292,26 @@
         <div class="story-creds">IT Manager → Director, Technology</div>
         <div class="story-industry">Technology</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"My own boss believed in me enough to encourage me to apply. The promotion still went to someone else. Working with Zaina, I finally understood that success doesn't mean work more and achieve more. It means live more. When I made that shift, everything fell into place — the Director title, the work-life balance, and even a new relationship."</div>
-        <div class="story-outcome">Promoted to Director of Technology</div>
+        <div class="story-quote">"My own boss believed in me enough to encourage me to apply. The promotion still went to someone else. Working with Zaina, I stopped trying to prove myself through more execution and started leading through influence and strategic thinking. Eighteen months later, I was promoted to Director of Technology. My life changed too. I finally had room in it, including a relationship I wasn't expecting."</div>
+        <div class="story-outcome">Promoted to Director of Technology in 18 months</div>
+      </div>
+    </div>
+
+    <!-- ANDREA -->
+    <div class="story-card fade-up">
+      <div class="story-image">
+        <img src="andrea.png" alt="Andrea" style="object-position: center top;" />
+        <div class="story-image-overlay">
+          <div class="story-result">Director, Data & Analytics · Within a Year</div>
+        </div>
+      </div>
+      <div class="story-content">
+        <div class="story-name">Andrea</div>
+        <div class="story-creds">PhD, 15 Years Experience → Director, Data and Analytics</div>
+        <div class="story-industry">Data &amp; Analytics</div>
+        <div class="story-divider"></div>
+        <div class="story-quote">"I had a PhD and fifteen years of experience, and I still watched a promotion go to someone else. I believed my work ethic was the whole case, that if I executed well enough, the room would eventually see it. Zaina helped me see I wasn't being measured by effort anymore. I was being measured by my capacity to build what came next. I stopped holding onto execution and started developing the people around me. Within a year, I was promoted to Director of Data and Analytics. The promotion followed that shift. It didn't create it."</div>
+        <div class="story-outcome">Promoted to Director of Data and Analytics within a year</div>
       </div>
     </div>
 
@@ -283,25 +320,25 @@
       <div class="story-image">
         <img src="mary.png" alt="Mary" style="object-position: center top;" />
         <div class="story-image-overlay">
-          <div class="story-result">Architecture Business Owner · Within a year</div>
+          <div class="story-result">Architecture Business Owner · Within a Year</div>
         </div>
       </div>
       <div class="story-content">
         <div class="story-name">Mary</div>
-        <div class="story-creds">Aspiring Entrepreneur → Architecture Business Owner</div>
+        <div class="story-creds">Professional → Architecture Business Owner</div>
         <div class="story-industry">Architecture</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"I wasn't stuck because I lacked experience. I was stuck because I didn't yet believe I was enough to begin. Zaina helped me see that I would grow with the business — not before it. Today I run my own architecture firm. I make great income. And I am finally doing work that feels like me."</div>
+        <div class="story-quote">"I wasn't lacking the experience or the capability. I was waiting for certainty to arrive before I let myself choose. Zaina helped me see I would grow with the business, not before it. Today I run my own architecture firm, doing work that feels like me."</div>
         <div class="story-outcome">Launched her own architecture firm within a year</div>
       </div>
     </div>
 
-    <!-- XINA -->
+    <!-- ZINA -->
     <div class="story-card fade-up">
       <div class="story-image">
-        <img src="xina.png" alt="Xina" style="object-position: center top;" />
+        <img src="zina.png" alt="Zina" style="object-position: center top;" />
         <div class="story-image-overlay">
-          <div class="story-result">IT Consulting Firm · 6 months</div>
+          <div class="story-result">IT Consulting Firm · 6 Months</div>
         </div>
       </div>
       <div class="story-content">
@@ -309,8 +346,8 @@
         <div class="story-creds">High Performer → Entrepreneur</div>
         <div class="story-industry">Technology</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"My career kept demanding more while giving back less. I had three young children and I was running on empty. Zaina helped me realize I had outgrown the stage — not failed it. Six months later I had my own IT Consulting firm, making double the income and having much more control over my time and energy."</div>
-        <div class="story-outcome">Launched IT Consulting firm in 6 months — double the income</div>
+        <div class="story-quote">"My career kept demanding more while giving back less. I had three young children and I was running on empty. Zaina helped me realize I had outgrown the stage, not failed it. Six months later I had my own IT Consulting firm, making double the income and having much more control over my time and energy."</div>
+        <div class="story-outcome">Launched IT Consulting firm in 6 months, doubled her income</div>
       </div>
     </div>
 
@@ -319,7 +356,7 @@
       <div class="story-image">
         <img src="may.png" alt="May" style="object-position: center top;" />
         <div class="story-image-overlay">
-          <div class="story-result">Head of QA · 8 months</div>
+          <div class="story-result">Head of QA · 8 Months</div>
         </div>
       </div>
       <div class="story-content">
@@ -327,7 +364,7 @@
         <div class="story-creds">Senior Professional → Head of QA</div>
         <div class="story-industry">Manufacturing</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"I was racing between a demanding job, my family, and my aging parents — giving everything to everyone except myself. Zaina helped me get clear on my priorities and build boundaries that actually held. For the first time, I learned to speak up and voice my opinion without feeling guilty or pushy. Eight months later, I was promoted to Head of QA."</div>
+        <div class="story-quote">"I was racing between a demanding job, my family, and my aging parents, giving everything to everyone except myself. Zaina helped me get clear on my priorities and build boundaries that actually held. For the first time, I learned to speak up and voice my opinion without feeling guilty or pushy. Eight months later, I was promoted to Head of QA."</div>
         <div class="story-outcome">Promoted to Head of QA in 8 months</div>
       </div>
     </div>
@@ -337,15 +374,15 @@
       <div class="story-image">
         <img src="sima.png" alt="Sima" style="object-position: center top;" />
         <div class="story-image-overlay">
-          <div class="story-result">Director of Operations · Under a year</div>
+          <div class="story-result">Director of Operations · Under a Year</div>
         </div>
       </div>
       <div class="story-content">
         <div class="story-name">Sima</div>
-        <div class="story-creds">On-Call Senior Professional → Director of Operations</div>
+        <div class="story-creds">Overextended Manager → Director of Operations</div>
         <div class="story-industry">Technology</div>
         <div class="story-divider"></div>
-        <div class="story-quote">"I was on call around the clock, doing the work of three people, and completely underpaid for all of it. I didn't know how to stop. Zaina helped me see that the key is not to do everything myself — but to empower people to do the work under my guidance. That shift earned me the Director of Operations title in less than a year."</div>
+        <div class="story-quote">"I was on call around the clock, doing the work of three people, and completely underpaid. I did not know how to stop. Zaina helped me see the key wasn't doing everything myself, but developing people who could own the work without me. That shift earned me the Director of Operations title in less than a year."</div>
         <div class="story-outcome">Promoted to Director of Operations in under a year</div>
       </div>
     </div>
@@ -355,8 +392,8 @@
   <!-- SECRET SAUCE -->
   <section class="sauce-section">
     <div class="sauce-inner fade-up">
-      <div class="sauce-line">"You don't negotiate your way to power.<br><strong>You become powerful first</strong> — and negotiate from there."</div>
-      <div class="sauce-attr">— Zaina Warne, Success Without Sacrifice</div>
+      <div class="sauce-line">"You don't negotiate your way to power.<br><strong>You become powerful first,</strong> and negotiate from there."</div>
+      <div class="sauce-attr">Zaina Warne, Success Without Sacrifice</div>
     </div>
   </section>
 
@@ -365,10 +402,10 @@
     <div class="final-cta-inner fade-up">
       <div class="final-rule"></div>
       <h2 class="final-title">Your story is<br><em>next.</em></h2>
-      <p class="final-body">Every woman on this page was exactly where you are right now. She delivered. She proved herself. And she was still waiting. One decision changed everything. Book your Discovery Call and let's find out if Success Without Sacrifice is your next step.</p>
+      <p class="final-body">Every woman on this page was exactly where you are right now. She delivered. She proved herself. And she was still waiting. One decision changed everything.</p>
       <div class="final-ctas">
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-primary">Book Your Discovery Call</a>
-        <a href="https://zafeer.ca/program.html" class="btn-secondary">Explore the Program →</a>
+        <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-secondary">Quiet Authority Experience™</a>
+        <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-primary">Success Without Sacrifice™</a>
       </div>
     </div>
   </section>
@@ -378,7 +415,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-logo">Zafeer</div>
-        <p class="footer-brand-desc">Helping high-achieving women in tech claim the promotion, the salary, and the seat at the table they have already earned — through identity transformation, not harder work.</p>
+        <p class="footer-brand-desc">Helping high-achieving women build the inner authority to lead with greater influence, freedom, and fulfillment, without sacrificing themselves in the process.</p>
       </div>
       <div>
         <div class="footer-col-title">Navigate</div>
@@ -392,9 +429,10 @@
       <div>
         <div class="footer-col-title">Resources</div>
         <div class="footer-links">
-          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Free Invisible Ceiling Guide</a>
-          <a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" rel="noopener">Book a Discovery Call</a>
-          <a href="https://zafeer.ca/program.html">The D4 Formula</a>
+          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Invisible Ceiling Assessment™</a>
+          <a href="https://zafeer.ca/negotiate-like-a-pro/">Negotiate Like a Pro™</a>
+          <a href="https://zainawarne.com/quiet-authority-experience.html">Quiet Authority Experience™</a>
+          <a href="https://zafeer.ca/success-without-sacrifice-payment.html">Enroll in Success Without Sacrifice™</a>
         </div>
       </div>
       <div>

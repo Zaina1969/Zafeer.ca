@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Success Without Sacrifice — The Program | Zaina Warne</title>
-  <meta name="description" content="A 12-week private coaching program for high-achieving women in tech who are done proving their worth — and ready to claim it." />
+  <title>Success Without Sacrifice, The Program | Zaina Warne</title>
+  <meta name="description" content="A 12-week private coaching program for high-achieving women who are done proving their worth and ready to lead from Quiet Authority." />
   <meta name="robots" content="index, follow" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:        #E8DDD0;
+      --cream:        #FFEFDD;
       --cream-mid:    #DDD0C0;
       --cream-dark:   #C8B8A4;
       --burgundy:     #6B1E2E;
       --burgundy-lt:  #8B3040;
       --burgundy-pale:#F2EAE4;
-      --text-dark:    #2C1810;
-      --text-mid:     #5A3A2A;
+      --text-dark:    #2E1F1A;
+      --text-mid:     #6B5F5A;
       --text-light:   #8C6A56;
       --white:        #FAF7F4;
       --border:       rgba(107,30,46,0.13);
       --border-md:    rgba(107,30,46,0.22);
+      --gold:         #C49A5A;
+      --gold-muted:   #BFA888;
+      --gray-cream:   #E8DDD0;
     }
 
     html { scroll-behavior: smooth; }
@@ -55,34 +58,38 @@
     .btn-secondary:hover { background: var(--burgundy); color: var(--cream); }
 
     /* ── SHARED ── */
-    .section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-    .section-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--burgundy); opacity: 0.5; }
+    .section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--gold-muted); opacity: 0.7; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1rem; }
-    .section-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .section-title em { font-style: italic; color: var(--gold-muted); font-weight: 400; }
     .section-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; }
 
     /* ── HERO ── */
     .hero {
       background: var(--burgundy);
-      padding: 3.5rem 2rem 3rem;
+      padding: 7rem 2rem 6rem;
       text-align: center;
     }
     .hero-inner { max-width: 760px; margin: 0 auto; }
-    .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(232,221,208,0.6); margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 1.75rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
     .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 36px; height: 0.5px; background: rgba(232,221,208,0.3); }
     .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 4.8rem); font-weight: 300; color: var(--cream); line-height: 1.05; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .hero h1 em { font-style: italic; font-weight: 400; }
-    .hero-rule { width: 50px; height: 0.5px; background: rgba(232,221,208,0.35); margin: 1.25rem auto; }
-    .hero-sub { font-size: 1.1rem; color: rgba(232,221,208,0.8); line-height: 1.85; margin-bottom: 2rem; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--gold-muted); }
+    .hero-rule { width: 50px; height: 0.5px; background: var(--gold-muted); opacity: 0.5; margin: 2rem auto; }
+    .hero-sub { font-size: 1.1rem; color: rgba(232,221,208,0.8); line-height: 1.85; margin-bottom: 2.5rem; max-width: 580px; margin-left: auto; margin-right: auto; }
     .hero-sub strong { color: var(--cream); font-weight: 500; }
     .hero-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .btn-cream { display: inline-block; padding: 0.95rem 2rem; background: var(--cream); color: var(--text-dark); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s; }
     .btn-cream:hover { background: var(--cream-dark); }
     .btn-outline-cream { display: inline-block; padding: 0.95rem 2rem; border: 1px solid rgba(232,221,208,0.5); color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, border-color 0.2s; }
     .btn-outline-cream:hover { background: rgba(232,221,208,0.1); border-color: var(--cream); }
+    .btn-gold { display: inline-block; padding: 0.95rem 2rem; background: var(--gold-muted); color: var(--text-dark); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s; }
+    .btn-gold:hover { background: var(--cream-dark); }
+    .btn-outline-gold { display: inline-block; padding: 0.95rem 2rem; border: 1px solid var(--gold-muted); color: var(--gold-muted); font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border-radius: 1px; transition: background 0.2s, color 0.2s; }
+    .btn-outline-gold:hover { background: var(--gold-muted); color: var(--text-dark); border-color: var(--gold-muted); }
 
     /* ── INVISIBLE CEILING ── */
-    .ceiling-section { max-width: 1160px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .ceiling-section { max-width: 1160px; margin: 0 auto; padding: 6rem 2rem 2rem; }
     .ceiling-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 1.5rem; }
     .ceiling-body strong { color: var(--text-dark); font-weight: 500; }
     .ceiling-image { position: relative; border-radius: 2px; overflow: hidden; }
@@ -97,7 +104,7 @@
     .sauce-attr { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-light); }
 
     /* ── D4 FORMULA ── */
-    .d4-section { padding: 6rem 2rem; }
+    .d4-section { padding: 3rem 2rem 6rem; }
     .d4-inner { max-width: 1160px; margin: 0 auto; }
     .d4-header { max-width: 600px; margin-bottom: 4rem; }
     .d4-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -105,20 +112,20 @@
     .d4-card:hover { border-color: var(--burgundy); box-shadow: 0 4px 24px rgba(107,30,46,0.06); }
     .d4-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--burgundy); transition: height 0.3s ease; }
     .d4-card:hover::before { height: 100%; }
-    .d4-phase { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.75rem; }
-    .d4-letter { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--burgundy); opacity: 0.12; line-height: 1; position: absolute; top: 1rem; right: 1.5rem; }
+    .d4-phase { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 0.75rem; }
+    .d4-letter { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--gold-muted); opacity: 0.18; line-height: 1; position: absolute; top: 1rem; right: 1.5rem; }
     .d4-title { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.875rem; line-height: 1.2; }
-    .d4-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
+    .d4-body { font-size: 1rem; color: var(--text-mid); line-height: 1.85; }
 
     /* ── WHAT'S INCLUDED ── */
-    .included-section { background: var(--white); border-top: 0.5px solid var(--border); padding: 6rem 2rem; }
+    .included-section { background: var(--gray-cream); border-top: 0.5px solid var(--border); padding: 6rem 2rem; }
     .included-inner { max-width: 1160px; margin: 0 auto; }
     .included-header { max-width: 600px; margin-bottom: 4rem; }
     .included-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .included-card { border: 0.5px solid var(--border); border-radius: 2px; padding: 2rem 1.75rem; background: var(--cream); }
     .included-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--burgundy); opacity: 0.3; line-height: 1; margin-bottom: 1rem; }
     .included-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.75rem; line-height: 1.3; }
-    .included-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
+    .included-body { font-size: 1rem; color: var(--text-mid); line-height: 1.85; }
 
     /* ── IS THIS YOU ── */
     .qualifying-section { padding: 6rem 2rem; }
@@ -130,8 +137,9 @@
     .check-text { font-size: 1.02rem; color: var(--text-mid); line-height: 1.75; }
     .qualifying-cta-box { background: var(--burgundy); border-radius: 2px; padding: 3rem 2.5rem; }
     .qualifying-cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 300; color: var(--cream); line-height: 1.3; margin-bottom: 1.25rem; }
-    .qualifying-cta-box h3 em { font-style: italic; }
+    .qualifying-cta-box h3 em { font-style: italic; color: var(--gold-muted); }
     .qualifying-cta-body { font-size: 1rem; color: rgba(232,221,208,0.8); line-height: 1.85; margin-bottom: 2rem; }
+    .qualifying-cta-buttons { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
 
     /* ── RISK REVERSAL ── */
     .risk-section { background: var(--burgundy-pale); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 5rem 2rem; }
@@ -139,20 +147,20 @@
     .risk-inner .section-eyebrow { justify-content: center; }
     .risk-inner .section-eyebrow::before { display: none; }
     .risk-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 300; color: var(--text-dark); line-height: 1.3; margin-bottom: 1.5rem; }
-    .risk-title em { font-style: italic; color: var(--burgundy); }
+    .risk-title em { font-style: italic; color: var(--gold-muted); }
     .risk-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; }
 
     /* ── FINAL CTA ── */
-    .final-cta { padding: 7rem 2rem; text-align: center; }
+    .final-cta { padding: 4rem 2rem 7rem; text-align: center; }
     .final-cta-inner { max-width: 640px; margin: 0 auto; }
     .final-rule { width: 40px; height: 0.5px; background: var(--burgundy); margin: 0 auto 2.5rem; opacity: 0.4; }
     .final-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 1.25rem; }
-    .final-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .final-title em { font-style: italic; color: var(--gold-muted); font-weight: 400; }
     .final-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2.5rem; }
     .final-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
-    footer { border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
+    footer { background: var(--gray-cream); border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
     .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; margin-top: 0.75rem; max-width: 260px; }
     .footer-col-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 1.25rem; }
@@ -175,7 +183,7 @@
 
     /* ── MOBILE ── */
     @media (max-width: 900px) {
-      .ceiling-section, .qualifying-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .qualifying-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .ceiling-image img { height: 320px; }
       .d4-grid { grid-template-columns: 1fr; }
       .included-grid { grid-template-columns: 1fr 1fr; }
@@ -189,6 +197,22 @@
       .hero-ctas, .final-ctas { flex-direction: column; align-items: center; }
       .footer-inner { grid-template-columns: 1fr; }
     }
+    .faq-section { background: var(--white); border-top: 0.5px solid var(--border); padding: 6rem 2rem; }
+    .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 0.5px solid var(--border); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; cursor: pointer; gap: 1rem; }
+    .faq-q-text { font-size: 0.93rem; font-weight: 500; color: var(--text-dark); line-height: 1.5; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; position: relative; }
+    .faq-icon::before, .faq-icon::after { content: ''; position: absolute; background: var(--burgundy); border-radius: 1px; transition: transform 0.3s, opacity 0.3s; }
+    .faq-icon::before { width: 12px; height: 1px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .faq-icon::after { width: 1px; height: 12px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .faq-item.open .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-answer-inner { font-size: 1.02rem; color: var(--text-mid); line-height: 1.9; padding-bottom: 1.5rem; }
+    .faq-answer-inner a { color: var(--burgundy); text-decoration: none; font-weight: 500; }
+    .faq-answer-inner a:hover { text-decoration: underline; }
+    .faq-answer-inner strong { color: var(--text-dark); font-weight: 500; }
+    .faq-item.open .faq-answer { max-height: 600px; }
   </style>
 </head>
 <body>
@@ -204,7 +228,6 @@
         <a href="https://zafeer.ca/program.html">Program</a>
         <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
         <a href="https://zafeer.ca/about.html">About</a>
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="nav-book">Book a Call</a>
       </div>
       <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -215,13 +238,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">12-Week Private Coaching Program</div>
-      <h1><em>Success Without</em><br>Sacrifice</h1>
+      <div class="hero-eyebrow">From Proving to Leading</div>
+      <h1>Being indispensable<br>isn't the same as being <em>influential.</em></h1>
       <div class="hero-rule"></div>
-      <p class="hero-sub">For high-achieving women in tech who are <strong>done proving their worth</strong> — and ready to claim the promotion, the salary, the title, and the seat at the table they have already earned.</p>
+      <p class="hero-sub">Certainty is the power within that projects confidence on the outside. Quiet Authority Experience™ is a focused session to see what's shaping your choices right now. Success Without Sacrifice™ is the full partnership to build the certainty that stands behind them.</p>
       <div class="hero-ctas">
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-cream">Book Your Discovery Call</a>
-        <a href="#d4" class="btn-outline-cream">Explore the D4 Formula</a>
+        <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-outline-gold">Quiet Authority Experience™</a>
+        <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-gold">Success Without Sacrifice™</a>
       </div>
     </div>
   </section>
@@ -231,26 +254,12 @@
     <div class="fade-up">
       <div class="section-eyebrow">The Real Problem</div>
       <h2 class="section-title">You have done<br>everything <em>right.</em><br>And still.</h2>
-      <p class="ceiling-body">You've read the books. Attended the seminars. Followed the frameworks. You may have even had a career coach. You have done everything right — and you are still not breaking through.</p>
+      <p class="ceiling-body">You've read the books. Attended the seminars. Followed the frameworks. You may have even had a career coach. You have done everything right, and you are still not breaking through.</p>
       <p class="ceiling-body">That is because every solution you've tried was built around what you need to <strong>do.</strong> No one was telling you who you need to <strong>be.</strong></p>
-      <p class="ceiling-body">The barrier was never the glass ceiling above you. It was always the <strong>invisible ceiling inside you</strong> — the beliefs quietly running your career decisions, telling you to wait a little longer, prove a little more, be a little safer.</p>
-      <p class="ceiling-body">What's missing in every solution you have tried is the inner work — one that transforms not just your strategy and technique, but <strong>who you are.</strong> So you stop fighting to earn your place and start showing up knowing that you already belong there.</p>
-    </div>
-    <div class="fade-up">
-      <div class="ceiling-image">
-        <img src="women.jpeg" alt="Women in leadership — Success Without Sacrifice coaching program" style="object-position: center 60%;" />
-      </div>
-      <div class="ceiling-image-caption">The women who break through don't work harder. They show up differently.</div>
+      <p class="ceiling-body">What's missing is not more strategy or more technique. It is the certainty that comes from knowing <strong>who you are</strong> before the room agrees. So you stop earning your place and start standing in it.</p>
+      <p class="ceiling-body">That is what the four phases ahead are built to do.</p>
     </div>
   </section>
-
-  <!-- SECRET SAUCE -->
-  <div class="secret-sauce">
-    <div class="secret-sauce-inner">
-      <div class="sauce-line">"You don't negotiate your way to power.<br><strong>You become powerful first</strong> — and negotiate from there."</div>
-      <div class="sauce-attr">— Zaina Warne, Success Without Sacrifice</div>
-    </div>
-  </div>
 
   <!-- D4 FORMULA -->
   <section class="d4-section" id="d4">
@@ -258,7 +267,7 @@
       <div class="d4-header fade-up">
         <div class="section-eyebrow">The Framework</div>
         <h2 class="section-title">The <em>D4 Formula</em></h2>
-        <p class="section-body" style="margin-top:1rem;">Four phases. Each one building on the last. This is not a curriculum — it is a transformation roadmap built around the woman you are becoming, not the one you have been performing.</p>
+        <p class="section-body" style="margin-top:1rem;">Four phases. Each one building on the last. This is not a curriculum. It is the roadmap for the woman you are becoming, not the one you have been performing, and it is how Quiet Authority is built.</p>
       </div>
       <div class="d4-grid">
         <div class="d4-card fade-up">
@@ -271,62 +280,44 @@
           <div class="d4-letter">D</div>
           <div class="d4-phase">Phase 02</div>
           <div class="d4-title">Design</div>
-          <p class="d4-body">We create your Customized Coaching Blueprint — priorities, career strategies, boundary structures, financial direction, relationship clarity. A practical architecture built around the woman you are becoming — not the one you've been performing.</p>
+          <p class="d4-body">Here you stop building your future around the identity you've been performing and start exploring the one you're becoming. Not a plan yet. A field of possibility: what it looks like to choose instead of prove. This is where Agency comes back.</p>
         </div>
         <div class="d4-card fade-up">
           <div class="d4-letter">D</div>
           <div class="d4-phase">Phase 03</div>
           <div class="d4-title">Decide</div>
-          <p class="d4-body">You make powerful, values-aligned decisions about the life you actually want. You define your non-negotiables. You set your vision. And you commit to making the transformation irreversible.</p>
+          <p class="d4-body">Possibility becomes commitment. You build your Quiet Authority Blueprint: the priorities, boundaries, and direction for your career, your finances, and your relationships, and you make the values-aligned choices that turn it from an idea into the life you're actually living.</p>
         </div>
         <div class="d4-card fade-up">
           <div class="d4-letter">D</div>
           <div class="d4-phase">Phase 04</div>
           <div class="d4-title">Develop</div>
-          <p class="d4-body">You build the mindset, the habits, and the emotional intelligence that sustain everything long after we finish. Here you will learn negotiation techniques, get to role play and practice them, and get feedback. This phase is about making it permanent — not just for the next promotion cycle. For life.</p>
+          <p class="d4-body">You build the mindset, the habits, and the emotional intelligence that sustain everything long after we finish. Here you will learn negotiation techniques, role play and practice them, and get feedback. This phase makes the shift permanent, not just for the next promotion cycle. For life.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT'S INCLUDED -->
+  <!-- TWO WAYS THIS CHANGES WHAT HAPPENS NEXT -->
   <section class="included-section">
     <div class="included-inner">
       <div class="included-header fade-up">
-        <div class="section-eyebrow">What You Receive</div>
-        <h2 class="section-title">Everything you need.<br><em>Nothing you don't.</em></h2>
-        <p class="section-body" style="margin-top:1rem;">12 weeks. Fully personalized. No scripts. No generic playbook. Built entirely around your situation, your organization, and your invisible ceiling.</p>
+        <div class="section-eyebrow">Two Ways This Changes What Happens Next</div>
       </div>
-      <div class="included-grid">
+      <div class="included-grid" style="grid-template-columns:1fr 1fr;">
         <div class="included-card fade-up">
-          <div class="included-num">01</div>
-          <div class="included-title">12 Private 1-on-1 Sessions</div>
-          <p class="included-body">One per week, 60 minutes each, over three months. Fully personalized to your situation, your organization, your invisible ceiling. No scripts. No generic playbook.</p>
+          <div class="included-title">Quiet Authority Experience™</div>
+          <p class="included-body">You will connect the dots between the boundary, the delegation, the visibility, and the promotion, the fragments you have been solving one at a time. You will know exactly what deserves your attention right now. You will leave with my recommendation and my perspective, and the decision will still be entirely yours. What you leave with is not another assessment telling you something you already know, but a roadmap for what to do with what you see.</p>
+          <div style="margin-top:1.5rem;">
+            <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-primary">Quiet Authority Experience™</a>
+          </div>
         </div>
         <div class="included-card fade-up">
-          <div class="included-num">02</div>
-          <div class="included-title">Done-at-Home Exercises</div>
-          <p class="included-body">Designed to deepen what we uncover in our sessions and anchor the shifts into your daily life — not just in our conversations.</p>
-        </div>
-        <div class="included-card fade-up">
-          <div class="included-num">03</div>
-          <div class="included-title">Personal Resilience Workbook</div>
-          <p class="included-body">A comprehensive assessment of the various areas of your life — the foundation for your transformation and the starting point for your customized blueprint.</p>
-        </div>
-        <div class="included-card fade-up">
-          <div class="included-num">04</div>
-          <div class="included-title">Customized Resilience Blueprint</div>
-          <p class="included-body">Built with you during Phase 2. Your personal roadmap, designed around the woman you are becoming. You carry this forward for life.</p>
-        </div>
-        <div class="included-card fade-up">
-          <div class="included-num">05</div>
-          <div class="included-title">Unlimited Email Support</div>
-          <p class="included-body">Because the moments that matter most don't always wait for a scheduled call. Zaina is in your corner when it counts — between sessions, not just during them.</p>
-        </div>
-        <div class="included-card fade-up">
-          <div class="included-num">06</div>
-          <div class="included-title">Progress Reviews at Weeks 4, 8 & 12</div>
-          <p class="included-body">Structured check-ins to ensure you're on track, adjusting course as needed, and celebrating every milestone along the way.</p>
+          <div class="included-title">Success Without Sacrifice™</div>
+          <p class="included-body">You will say what you mean and let it stand, without adding the sentence that walks it back. You will be known for what you can lead, not just what you can carry. Decisions will stop consuming the version of you that has to relitigate every choice twice. And your next chapter will feel chosen, not inherited, not expected, not impressive only because someone else finally noticed. That is what twelve weeks of this work is actually building toward.</p>
+          <div style="margin-top:1.5rem;">
+            <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-primary">Success Without Sacrifice™</a>
+          </div>
         </div>
       </div>
     </div>
@@ -337,7 +328,7 @@
     <div class="qualifying-inner">
       <div class="fade-up">
         <div class="section-eyebrow">Is This You</div>
-        <h2 class="section-title">This program<br>was built <em>for you</em><br>if —</h2>
+        <h2 class="section-title">This program<br>was built <em>for you</em><br>if:</h2>
         <div class="qualifying-checks">
           <div class="check-item">
             <div class="check-box"></div>
@@ -345,22 +336,25 @@
           </div>
           <div class="check-item">
             <div class="check-box"></div>
-            <div class="check-text">You are done making excuses and ready to make serious decisions about your career</div>
+            <div class="check-text">You are ready to choose without waiting for one more year of proof</div>
           </div>
           <div class="check-item">
             <div class="check-box"></div>
-            <div class="check-text">You appreciate 1-on-1 partnership, accountability, and guidance — rather than figuring it out alone</div>
+            <div class="check-text">You appreciate 1-on-1 partnership, accountability, and guidance, rather than figuring it out alone</div>
           </div>
           <div class="check-item">
             <div class="check-box"></div>
-            <div class="check-text">You are done running on the treadmill going nowhere — and ready to lead yourself to the next level of your career and your life</div>
+            <div class="check-text">You are done running on the treadmill going nowhere, ready to lead yourself to the next level of your career and your life</div>
           </div>
         </div>
       </div>
       <div class="qualifying-cta-box fade-up">
-        <h3>The only thing standing between you and what you want is the story you've been telling yourself.<br><em>And you have the power to change that story.</em></h3>
-        <p class="qualifying-cta-body">Not someday. Not when you have more experience, more credentials, more proof. Now. Book a Discovery Call and let's find out if Success Without Sacrifice is the right next move for you.</p>
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-cream">Book Your Discovery Call</a>
+        <h3>You already know what needs to change.<br><em>What's left is deciding you don't need one more year of proof before you choose it.</em></h3>
+        <p class="qualifying-cta-body">If that's true right now, Success Without Sacrifice™ is ready when you are. Still forming the picture? Quiet Authority Experience™ is where to start.</p>
+        <div class="qualifying-cta-buttons">
+          <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-gold">Quiet Authority Experience™</a>
+          <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-gold">Success Without Sacrifice™</a>
+        </div>
       </div>
     </div>
   </section>
@@ -370,19 +364,88 @@
     <div class="risk-inner fade-up">
       <div class="section-eyebrow">A Note From Zaina</div>
       <h2 class="risk-title">You do not need to implement everything <em>perfectly</em> for this to work.</h2>
-      <p class="risk-body">Many of the women I've worked with tell me that the Discover phase alone — just the act of finally naming the belief that had been silently running their career — was worth the entire investment on its own. Even partial implementation of this work creates results that are real and lasting. Because we're not building a performance. We're building an identity. And identity doesn't disappear when things get busy.</p>
+      <p class="risk-body">Many of the women I've worked with tell me that the Discover phase alone, just the act of finally naming the belief that had been silently running their career, was worth the entire investment on its own. Even partial implementation of this work creates results that are real and lasting. We are not building a performance. We are building an identity. And identity doesn't disappear when things get busy.</p>
+      <div style="margin-top:2rem;">
+        <a href="https://zafeer.ca/testimonials.html" class="btn-secondary">See What Changed for Them</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (relocated from homepage) -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="section-eyebrow fade-up">Questions</div>
+      <h2 class="section-title fade-up" style="margin-bottom:3rem;">Frequently Asked<br><em>Questions</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">I've tried coaching before and it didn't work. Why would this be different?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Most coaching programs focus on what you need to do. Success Without Sacrifice focuses on who you need to become. The invisible ceiling, the beliefs quietly running your career decisions, is the root cause no other program addresses directly.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is this program worth the investment?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">This is the identity decision everything else has been waiting on. The women who complete this program get the promotion, and stop needing to prove they deserve it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">I'm already stretched thin. How will I find time for this?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">One 60-minute session per week. The done-at-home exercises are designed to fit into your life, not add to the pile. Being stretched thin isn't the barrier here, it's often the pattern this work is here to uncover.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How long is the program and what does it include?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Success Without Sacrifice is a 12-week private coaching program. Here is what you receive:
+          <br><br>
+          <strong>12 private 1-on-1 sessions with Zaina</strong>, one per week, 60 minutes each, over three months. Fully personalized to your situation, your organization, your invisible ceiling. No scripts. No generic playbook.
+          <br><br>
+          <strong>Done-at-home exercises</strong>, designed to deepen what we uncover in our sessions and anchor the shifts into your daily life.
+          <br><br>
+          <strong>Unlimited email support between sessions</strong>, because the moments that matter most don't always wait for a scheduled call.
+          <br><br>
+          <strong>Structured progress reviews at weeks 4, 8, and 12</strong>, to ensure you're on track, adjusting course as needed, and celebrating every milestone along the way.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is the coaching online or in-person?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">All sessions are private 1-on-1 video calls between you and Zaina. There are no group classes, no cohorts, and no shared spaces. Everything you share is completely confidential. Sessions are conducted virtually, making Success Without Sacrifice accessible no matter where you are in the world, and scheduled around your calendar.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is this program the right fit for me?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes, if you are a high-achieving woman in corporate leadership or tech. You excelled at your job, and still the promotion, the title, the salary keep going to someone else.<br><br>The best way to find out is to start with the Quiet Authority Experience™. We identify what's been shaping your choices and build a personalized roadmap, so you can see clearly whether Success Without Sacrifice is your next move.<br><br><a href="https://zainawarne.com/quiet-authority-experience.html">Book your Quiet Authority Experience™ here →</a></div></div>
+      </div>
+
     </div>
   </section>
 
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="final-cta-inner fade-up">
-      <div class="final-rule"></div>
-      <h2 class="final-title">Ready to stop proving<br>and start <em>claiming</em>?</h2>
-      <p class="final-body">Your transformation starts with one conversation. Book your Discovery Call with Zaina today — and take the first real step toward the seat at the table, the financial freedom, and the life you have already earned.</p>
+      <h2 class="final-title">Ready to stop proving<br>and start <em>leading</em>?</h2>
+      <p class="final-body">Your transformation starts with a decision. Take the first real step toward the seat at the table, the financial freedom, and the certainty to know you belong in both.</p>
       <div class="final-ctas">
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-primary">Book Your Discovery Call</a>
-        <a href="https://zafeer.ca/about.html" class="btn-secondary">Meet Zaina →</a>
+        <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-secondary">Quiet Authority Experience™</a>
+        <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-primary">Success Without Sacrifice™</a>
       </div>
     </div>
   </section>
@@ -392,7 +455,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-logo">Zafeer</div>
-        <p class="footer-brand-desc">Helping high-achieving women in tech claim the promotion, the salary, and the seat at the table they have already earned — through identity transformation, not harder work.</p>
+        <p class="footer-brand-desc">Helping high-achieving women build the inner authority to lead with greater influence, freedom, and fulfillment, without sacrificing themselves in the process.</p>
       </div>
       <div>
         <div class="footer-col-title">Navigate</div>
@@ -406,9 +469,10 @@
       <div>
         <div class="footer-col-title">Resources</div>
         <div class="footer-links">
-          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Free Invisible Ceiling Guide</a>
-          <a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" rel="noopener">Book a Discovery Call</a>
-          <a href="#d4">The D4 Formula</a>
+          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Invisible Ceiling Assessment™</a>
+          <a href="https://zafeer.ca/negotiate-like-a-pro/">Negotiate Like a Pro™</a>
+          <a href="https://zainawarne.com/quiet-authority-experience.html">Quiet Authority Experience™</a>
+          <a href="https://zafeer.ca/success-without-sacrifice-payment.html">Enroll in Success Without Sacrifice™</a>
         </div>
       </div>
       <div>
@@ -432,6 +496,12 @@
   <script>
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('open');
+    }
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
     }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

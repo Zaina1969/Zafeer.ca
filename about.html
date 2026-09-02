@@ -11,17 +11,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:        #E8DDD0;
+      --cream:        #FFEFDD;
       --cream-mid:    #DDD0C0;
       --cream-dark:   #C8B8A4;
       --burgundy:     #6B1E2E;
       --burgundy-lt:  #8B3040;
       --burgundy-pale:#F2EAE4;
-      --text-dark:    #2C1810;
-      --text-mid:     #5A3A2A;
+      --text-dark:    #2E1F1A;
+      --text-mid:     #6B5F5A;
       --text-light:   #8C6A56;
       --white:        #FAF7F4;
       --border:       rgba(107,30,46,0.13);
+      --gold:         #C49A5A;
+      --gold-muted:   #BFA888;
+      --gray-cream:   #E8DDD0;
     }
 
     html { scroll-behavior: smooth; }
@@ -37,7 +40,7 @@
     }
 
     /* ── NAV ── */
-    .nav-outer { border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 100; background: rgba(232,221,208,0.95); backdrop-filter: blur(10px); }
+    .nav-outer { border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 100; background: var(--gray-cream); backdrop-filter: blur(10px); }
     nav { max-width: 1160px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
     .nav-links { display: flex; align-items: center; gap: 2rem; }
     .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
@@ -54,8 +57,8 @@
     .btn-secondary:hover { background: var(--burgundy); color: var(--cream); }
 
     /* ── SHARED ── */
-    .section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-    .section-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--burgundy); opacity: 0.5; }
+    .section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--gold-muted); opacity: 0.7; }
 
     /* ── HERO / MEET ZAINA ── */
     .meet-section {
@@ -67,8 +70,8 @@
       gap: 5rem;
       align-items: center;
     }
-    .meet-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-    .meet-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--burgundy); opacity: 0.5; }
+    .meet-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .meet-eyebrow::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--gold-muted); opacity: 0.7; }
     .meet-headline {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -78,7 +81,7 @@
       margin-bottom: 2rem;
       letter-spacing: -0.01em;
     }
-    .meet-headline em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .meet-headline em { font-style: italic; color: var(--gold-muted); font-weight: 400; }
     .meet-body {
       font-size: 1.05rem;
       color: var(--text-mid);
@@ -104,7 +107,7 @@
       border-top: 0.5px solid var(--border);
     }
     .meet-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: var(--burgundy); line-height: 1; margin-bottom: 0.3rem; }
-    .meet-stat-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); line-height: 1.4; }
+    .meet-stat-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); line-height: 1.4; }
 
     /* ── PHOTO ── */
     .meet-image { position: relative; }
@@ -119,7 +122,7 @@
     .meet-image-caption {
       margin-top: 0.875rem;
       font-size: 0.8rem;
-      color: var(--text-light);
+      color: var(--text-mid);
       font-style: italic;
       text-align: center;
     }
@@ -160,7 +163,7 @@
       line-height: 1.2;
       margin-bottom: 0.75rem;
     }
-    .beliefs-title em { font-style: italic; color: var(--burgundy); font-weight: 400; }
+    .beliefs-title em { font-style: italic; color: var(--gold-muted); font-weight: 400; }
     .beliefs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .belief-card {
       border: 0.5px solid var(--border);
@@ -182,7 +185,7 @@
       color: var(--text-dark);
       margin-bottom: 0.875rem;
     }
-    .belief-body { font-size: 1rem; color: var(--text-light); line-height: 1.85; }
+    .belief-body { font-size: 1rem; color: var(--text-mid); line-height: 1.85; }
 
     /* ── CLOSING QUOTE ── */
     .closing-section { padding: 4rem 2rem; text-align: center; }
@@ -198,12 +201,12 @@
       margin-bottom: 1.25rem;
     }
     .closing-quote strong { font-style: normal; font-weight: 600; color: var(--burgundy); }
-    .closing-attr { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-light); margin-bottom: 3rem; }
+    .closing-attr { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 3rem; }
     .closing-body { font-size: 1.05rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 2.5rem; max-width: 560px; margin-left: auto; margin-right: auto; }
     .closing-ctas { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
-    footer { border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
+    footer { background: var(--gray-cream); border-top: 0.5px solid var(--border); padding: 4rem 2rem 2.5rem; }
     .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; margin-top: 0.75rem; max-width: 260px; }
     .footer-col-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 1.25rem; }
@@ -255,7 +258,6 @@
         <a href="https://zafeer.ca/program.html">Program</a>
         <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
         <a href="https://zafeer.ca/about.html">About</a>
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="nav-book">Book a Call</a>
       </div>
       <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -270,10 +272,10 @@
       <h1 class="meet-headline">
         20 years of <em>living it,<br>leading it, coaching it</em>
       </h1>
-      <p class="meet-body">With an Engineering background and a long successful career in corporate tech, I know exactly what it takes to climb to the top — and the price many women silently pay to get there.</p>
+      <p class="meet-body">With an Engineering background and a long successful career in corporate tech, I know exactly what it takes to climb to the top, and the price many women silently pay to get there.</p>
       <p class="meet-body">As a first-generation professional who navigated cultural pressures, family expectations, and a relentless inner critic, I've lived the cost of succeeding on everyone else's terms. That personal reckoning is what drove me to build something bigger.</p>
-      <p class="meet-body">With a second degree in Psychology, and certified in both Resilience Coaching and Career Coaching, I've helped 50+ high-achieving women in tech break through what's silently holding them back — and negotiate the promotion, title, and salary they deserve.</p>
-      <div class="meet-closer">With me, you don't just get coaching. You get a partner who understands you — and will go the extra mile with you. I built a multi-million-dollar IT consulting business using these same tools. Now it's your turn.</div>
+      <p class="meet-body">With a second degree in Psychology, and certified in both Resilience Coaching and Career Coaching, I've helped 50+ high-achieving women in tech break through what's silently holding them back, and negotiate the promotion, title, and salary they deserve.</p>
+      <div class="meet-closer">With me, you don't just get coaching. You get a partner who understands you, and will go the extra mile with you. I built a multi-million-dollar IT consulting business using these same tools. Now it's your turn.</div>
       <div class="meet-stats">
         <div>
           <div class="meet-stat-num">20+</div>
@@ -290,17 +292,17 @@
       </div>
     </div>
     <div class="meet-image fade-up">
-      <img src="me.png" alt="Zaina Warne — Career Coach for Women in Tech" />
-      <div class="meet-image-caption">Zaina Warne — Founder of Zafeer & Success Without Sacrifice</div>
+      <img src="me.png" alt="Zaina Warne, Career Coach for Women in Tech" />
+      <div class="meet-image-caption">Zaina Warne, Founder of Zafeer & Success Without Sacrifice</div>
     </div>
   </section>
 
   <!-- BURGUNDY STRIPE -->
   <div class="stripe">
     <div class="stripe-inner">
-      <p>"The ceiling holding you back is not above you. It is inside you.<br><strong>And you are the only one who can break through it.<br>But you don't have to do it alone."</strong></p>
+      <p>"The barrier was never the <strong>glass ceiling</strong> above you.<br>It was always the <strong>invisible ceiling</strong> inside you."</p>
       <div class="stripe-rule"></div>
-      <div class="stripe-attr">— Zaina Warne</div>
+      <div class="stripe-attr">Zaina Warne</div>
     </div>
   </div>
 
@@ -314,20 +316,21 @@
       <div class="beliefs-grid">
         <div class="belief-card fade-up">
           <div class="belief-icon">✦</div>
-          <div class="belief-title">Empowerment</div>
-          <p class="belief-body">True empowerment isn't given — it's uncovered. Every woman I work with already has what she needs. My role is to help her see it, claim it, and lead from it — without apology and without waiting for permission.</p>
+          <div class="belief-title">Agency</div>
+          <p class="belief-body">You already have choices, even when the path forward doesn't feel clear yet. My work isn't to hand you a plan, it's to help you see the choices that were always yours to make.</p>
         </div>
         <div class="belief-card fade-up">
           <div class="belief-icon">✦</div>
-          <div class="belief-title">Authenticity</div>
-          <p class="belief-body">The most powerful thing a woman can do in a boardroom is show up as herself. Not a polished version. Not a safer version. Herself. Real influence comes from alignment — when who you are matches how you show up.</p>
+          <div class="belief-title">Authorship</div>
+          <p class="belief-body">You stop waiting for a boss, an organization, or the right moment to decide for you, and start making the choices that are actually yours to own.</p>
         </div>
         <div class="belief-card fade-up">
           <div class="belief-icon">✦</div>
-          <div class="belief-title">Transformation</div>
-          <p class="belief-body">Every tool, exercise, and conversation in my coaching program is designed to create lasting change — not temporary motivation. Because transformation that sticks doesn't come from doing more. It comes from becoming more.</p>
+          <div class="belief-title">Certainty</div>
+          <p class="belief-body">Not confidence built on evidence, but the inner stability to stand behind what you choose before anyone else agrees with it, or even understands it yet.</p>
         </div>
       </div>
+      <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--text-dark);margin-top:2.5rem;">Together, they are Quiet Authority: the certainty to stand behind your choices before the room agrees.</p>
     </div>
   </section>
 
@@ -337,15 +340,15 @@
       <div class="closing-rule"></div>
       <div class="closing-quote">
         "You don't negotiate your way to power.<br>
-        <strong>You become powerful first</strong> —<br>
+        <strong>You become powerful first,</strong><br>
         and negotiate from there.<br>
         That is Success Without Sacrifice."
       </div>
-      <div class="closing-attr">— Zaina Warne, Founder of Zafeer</div>
-      <p class="closing-body">If you've read this far, something in you is ready. Let's have a real conversation about where you are, where you want to be, and whether Success Without Sacrifice is your next step.</p>
+      <div class="closing-attr">Zaina Warne, Founder of Zafeer</div>
+      <p class="closing-body">If you've read this far, something in you is ready. Quiet Authority Experience™ is where to see what's been shaping your choices. Success Without Sacrifice™ is where you change it.</p>
       <div class="closing-ctas">
-        <a href="https://calendly.com/zaina-warne/zoom-coffee" class="btn-primary">Book Your Discovery Call</a>
-        <a href="https://zafeer.ca/program.html" class="btn-secondary">Explore the Program →</a>
+        <a href="https://zainawarne.com/quiet-authority-experience.html" class="btn-secondary">Quiet Authority Experience™</a>
+        <a href="https://zafeer.ca/success-without-sacrifice-payment.html" class="btn-primary">Success Without Sacrifice™</a>
       </div>
     </div>
   </section>
@@ -369,9 +372,10 @@
       <div>
         <div class="footer-col-title">Resources</div>
         <div class="footer-links">
-          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Free Invisible Ceiling Guide</a>
-          <a href="https://calendly.com/zaina-warne/zoom-coffee" target="_blank" rel="noopener">Book a Discovery Call</a>
-          <a href="https://zafeer.ca/program.html">The D4 Formula</a>
+          <a href="https://zainawarne.com/" target="_blank" rel="noopener">Invisible Ceiling Assessment™</a>
+          <a href="https://zafeer.ca/negotiate-like-a-pro/">Negotiate Like a Pro™</a>
+          <a href="https://zainawarne.com/quiet-authority-experience.html">Quiet Authority Experience™</a>
+          <a href="https://zafeer.ca/success-without-sacrifice-payment.html">Enroll in Success Without Sacrifice™</a>
         </div>
       </div>
       <div>
