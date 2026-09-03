@@ -6,43 +6,43 @@
   <title>Welcome to Success Without Sacrifice™ | Zafeer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --burgundy: #4A1220;
-      --burgundy-mid: #6B1E2E;
-      --cream: #FAF8F3;
-      --warm-cream: #FFEFDD;
+      --burgundy: #6B1E2E;
+      --burgundy-lt: #8B3040;
+      --cream: #FFEFDD;
+      --white: #FAF7F4;
       --gold: #C49A5A;
-      --gold-light: #E4BE83;
-      --deep: #2E1F1A;
-      --muted: #6B5F5A;
+      --gold-muted: #BFA888;
+      --text-dark: #2E1F1A;
+      --text-mid: #6B5F5A;
       --border-gold: rgba(196,154,90,.42);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       background: var(--cream);
-      color: var(--deep);
-      font-family: 'DM Sans', Arial, sans-serif;
+      color: var(--text-dark);
+      font-family: 'Public Sans', Arial, sans-serif;
     }
     header {
       min-height: 72px;
       padding: 0 42px;
-      background: var(--burgundy);
-      border-bottom: 1px solid rgba(196,154,90,.28);
+      background: var(--cream);
+      border-bottom: 1px solid var(--border-gold);
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .logo {
-      color: var(--warm-cream);
-      font: 400 25px 'Cormorant Garamond', Georgia, serif;
+      color: var(--burgundy);
+      font: 400 25px 'Fraunces', Georgia, serif;
       letter-spacing: .05em;
       text-decoration: none;
     }
     .movement {
-      color: var(--gold-light);
+      color: var(--text-mid);
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -52,35 +52,24 @@
       text-align: center;
       padding: 76px 24px 68px;
     }
-    .mark {
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 24px;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 50%;
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 26px;
-    }
     .eyebrow {
       margin: 0 0 18px;
-      color: var(--gold-light);
+      color: var(--gold-muted);
       font-size: 11px;
       letter-spacing: .2em;
       text-transform: uppercase;
     }
     h1 {
       margin: 0 auto 18px;
-      color: #fff;
-      font: 300 clamp(42px,6vw,62px)/1.08 'Cormorant Garamond', Georgia, serif;
+      color: var(--cream);
+      font: 300 clamp(42px,6vw,62px)/1.08 'Fraunces', Georgia, serif;
       letter-spacing: -.025em;
     }
-    h1 em { color: var(--gold-light); font-weight: 300; }
+    h1 em { color: var(--gold); font-weight: 400; font-style: italic; }
     .hero-copy {
       max-width: 540px;
       margin: 0 auto;
-      color: #e8c4cc;
+      color: rgba(255,239,221,.8);
       font-size: 17px;
       line-height: 1.7;
     }
@@ -96,24 +85,24 @@
     .celebration h2,
     .next h2 {
       margin: 0 0 14px;
-      color: var(--deep);
-      font: 300 34px/1.2 'Cormorant Garamond', Georgia, serif;
+      color: var(--text-dark);
+      font: 300 34px/1.2 'Fraunces', Georgia, serif;
     }
     .celebration p {
       max-width: 580px;
       margin: 0 auto;
-      color: var(--muted);
+      color: var(--text-mid);
       font-size: 16px;
       line-height: 1.8;
     }
     .next {
       padding: 36px;
-      background: var(--warm-cream);
+      background: var(--white);
       border: 1px solid var(--border-gold);
     }
     .next > p {
       margin: 0 0 30px;
-      color: var(--muted);
+      color: var(--text-mid);
       font-size: 15px;
       line-height: 1.7;
     }
@@ -122,33 +111,44 @@
     .number {
       width: 40px;
       height: 40px;
-      border: 1px solid var(--burgundy-mid);
+      border: 1px solid var(--burgundy);
       border-radius: 50%;
-      color: var(--burgundy-mid);
+      color: var(--burgundy);
       display: grid;
       place-items: center;
-      font: 400 18px 'Cormorant Garamond', Georgia, serif;
+      font: 400 18px 'Fraunces', Georgia, serif;
     }
     .step h3 {
       margin: 2px 0 5px;
-      color: var(--deep);
+      color: var(--text-dark);
       font-size: 15px;
       font-weight: 500;
     }
     .step p {
       margin: 0;
-      color: var(--muted);
+      color: var(--text-mid);
       font-size: 14px;
       line-height: 1.65;
     }
-    .contact {
-      margin: 26px auto 0;
+    .book-call-btn {
+      display: block;
+      width: 100%;
+      max-width: 380px;
+      margin: 32px auto 0;
+      background: var(--burgundy);
+      color: var(--cream);
+      text-decoration: none;
       text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
+      padding: 18px 32px;
+      font-family: 'Public Sans', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background 0.2s;
     }
-    .contact a { color: var(--burgundy-mid); font-weight: 500; }
+    .book-call-btn:hover { background: var(--burgundy-lt); }
     .note {
       margin-top: 52px;
       padding-top: 38px;
@@ -158,12 +158,12 @@
     .note p {
       max-width: 520px;
       margin: 0 auto 16px;
-      color: var(--muted);
-      font: italic 20px/1.65 'Cormorant Garamond', Georgia, serif;
+      color: var(--text-mid);
+      font: italic 20px/1.65 'Fraunces', Georgia, serif;
     }
     .signature {
-      color: var(--burgundy-mid);
-      font: italic 30px 'Cormorant Garamond', Georgia, serif;
+      color: var(--burgundy);
+      font: italic 30px 'Fraunces', Georgia, serif;
     }
     footer {
       padding: 34px 24px;
@@ -172,7 +172,7 @@
       text-align: center;
       font-size: 12px;
     }
-    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a { color: var(--gold); text-decoration: none; }
     @media (max-width: 640px) {
       header { min-height: 66px; padding: 0 20px; }
       .movement { display: none; }
@@ -189,7 +189,6 @@
   </header>
 
   <section class="hero">
-    <div class="mark">✓</div>
     <p class="eyebrow">Welcome to Success Without Sacrifice™</p>
     <h1>Your place is confirmed.<br><em>Welcome.</em></h1>
     <p class="hero-copy">This is a meaningful decision. Take a moment to celebrate it.</p>
@@ -208,15 +207,15 @@
         <div class="step">
           <div class="number">1</div>
           <div>
-            <h3>Let this decision land</h3>
-            <p>There is nothing to prepare today. Give yourself permission to enjoy the decision you just made.</p>
+            <h3>Book your onboarding call</h3>
+            <p>Use the button below to find a time that works for you. There is nothing to prepare. Come as you are.</p>
           </div>
         </div>
         <div class="step">
           <div class="number">2</div>
           <div>
-            <h3>Watch for my personal email</h3>
-            <p>You will hear from me personally within one business day with everything you need to schedule our welcome conversation and begin.</p>
+            <h3>Let this decision land</h3>
+            <p>Give yourself permission to enjoy the decision you just made, today, before anything else begins.</p>
           </div>
         </div>
         <div class="step">
@@ -227,7 +226,7 @@
           </div>
         </div>
       </div>
-      <p class="contact">Questions before you hear from me? Email <a href="mailto:zaina@zafeer.ca">zaina@zafeer.ca</a>.</p>
+      <a href="https://calendar.app.google/DG3fxZG11J986rVJ8" target="_blank" class="book-call-btn">Book Your Onboarding Call Now</a>
     </section>
 
     <section class="note">
