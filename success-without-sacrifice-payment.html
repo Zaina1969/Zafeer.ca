@@ -7,11 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --cream:         #FAF8F3;
+    --cream:         #FFEFDD;
     --deep:          #1A1210;
     --burgundy:      #6B1E2E;
     --burgundy-mid:  #8C2D40;
@@ -105,7 +106,7 @@
   .main-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 80px 80px;
+    padding: 48px 80px 80px;
   }
 
   /* PAYMENT PLAN SELECTOR */
@@ -133,7 +134,7 @@
     padding: 22px 20px;
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s;
-    background: #fff;
+    background: #FAF7F4;
     position: relative;
     text-align: center;
   }
@@ -223,7 +224,7 @@
     justify-content: center;
     gap: 12px;
     background: var(--burgundy);
-    color: #fff;
+    color: #FFEFDD;
     border: none;
     padding: 22px 56px;
     font-family: 'DM Sans', sans-serif;
@@ -274,7 +275,7 @@
     border: 1px solid var(--border-gold);
     border-radius: 4px;
     padding: 24px;
-    background: #fff;
+    background: #FAF7F4;
   }
   .testimonial-client {
     display: flex;
@@ -324,16 +325,55 @@
     .page-header       { flex-direction: column; padding: 40px 20px 24px; gap: 32px; }
     .header-photo      { width: 100%; max-width: 300px; margin: 0 auto; }
     .header-photo img  { height: 280px; }
-    .main-container    { padding: 0 20px 80px; }
+    .main-container    { padding: 36px 20px 80px; }
     .testimonial-grid  { grid-template-columns: 1fr; }
     .plan-options      { grid-template-columns: 1fr; }
   }
 
   @media (min-width: 721px) and (max-width: 1024px) {
     .page-header    { padding: 48px 40px 28px; }
-    .main-container { padding: 0 40px 80px; }
+    .main-container { padding: 40px 40px 80px; }
     .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
     .plan-options   { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* CONTEXT SECTION — bridges hero recognition to the investment ask */
+  .context-section {
+    background: #6B1E2E;
+    padding: 64px 80px;
+  }
+  .context-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .context-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(26px, 3.6vw, 38px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #BFA888;
+    margin-bottom: 28px;
+  }
+  .context-body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,239,221,0.85);
+  }
+  .context-body p { margin-bottom: 20px; }
+  .context-body p:last-child {
+    margin-bottom: 0;
+    color: #BFA888;
+    font-weight: 500;
+  }
+
+  @media (max-width: 720px) {
+    .context-section { padding: 48px 24px; }
+  }
+  @media (min-width: 721px) and (max-width: 1024px) {
+    .context-section { padding: 56px 40px; }
   }
 </style>
 </head>
@@ -354,19 +394,50 @@
     </div>
   </header>
 
-  <main class="main-container">
-
-    <!-- ENROLL ME NOW top button — centered -->
-    <div class="enroll-section" style="margin-bottom: 28px;">
-      <button class="enroll-btn-main"
-        onclick="document.getElementById('payment-plans').scrollIntoView({behavior:'smooth'})">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        Enroll Me Now
-      </button>
+  <section class="context-section">
+    <div class="context-inner">
+      <h2 class="context-title">You have done everything right. And still the promotion, the recognition, the seat at the table went to someone else.</h2>
+      <div class="context-body">
+        <p>You've read the books. Attended the seminars. Followed the frameworks. You may have even had a career coach. You have done everything right, and you are still not breaking through.</p>
+        <p>That is because every solution you've tried was built around what you need to do. No one was telling you who you need to be.</p>
+        <p>What's missing is not more strategy or more technique. It is the certainty that comes from knowing who you are before the room agrees. So you stop earning your place and start standing in it.</p>
+        <p>That is what Success Without Sacrifice&trade; will help you build.</p>
+      </div>
     </div>
+  </section>
+
+  <main class="main-container">
 
     <!-- PAYMENT PLAN SELECTOR -->
     <div class="payment-plan-section" id="payment-plans">
+
+      <!-- WHAT IS INCLUDED -->
+      <div style="margin-bottom: 36px;">
+        <p class="included-heading">What is included</p>
+        <ul class="included-list">
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            12 private 1-on-1 sessions with Zaina, one per week, 60 minutes each, fully personalized to your situation, your organization, and your invisible ceiling
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Done-at-home exercises designed to anchor each shift into your daily life
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Unlimited email support between sessions throughout the full 12 weeks
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Structured progress reviews at weeks 4, 8, and 12 to keep you on track and celebrate every milestone
+          </li>
+          <li>
+            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Your Quiet Authority Blueprint, an assessment of where you stand today built into the personal roadmap designed around the woman you are becoming. Not a worksheet. A transformation document you carry forward for life.
+          </li>
+        </ul>
+      </div>
+
       <h2 class="payment-plan-heading">Choose your investment option</h2>
       <p class="payment-plan-sub">All options include the full 12-week program. Select what works best for you.</p>
 
@@ -397,33 +468,6 @@
           <span class="plan-total">CAD &nbsp;·&nbsp; Total $5,370</span>
         </div>
 
-      </div>
-
-      <!-- WHAT IS INCLUDED -->
-      <div style="margin: 36px 0;">
-        <p class="included-heading">What is included</p>
-        <ul class="included-list">
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            12 private 1-on-1 sessions with Zaina, one per week, 60 minutes each, fully personalized to your situation, your organization, and your invisible ceiling
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Done-at-home exercises designed to anchor each shift into your daily life
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited email support between sessions throughout the full 12 weeks
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Structured progress reviews at weeks 4, 8, and 12 to keep you on track and celebrate every milestone
-          </li>
-          <li>
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Your Quiet Authority Blueprint, an assessment of where you stand today built into the personal roadmap designed around the woman you are becoming. Not a worksheet. A transformation document you carry forward for life.
-          </li>
-        </ul>
       </div>
 
       <!-- Enroll button — updates based on selection -->
