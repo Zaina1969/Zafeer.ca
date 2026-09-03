@@ -375,9 +375,63 @@
   @media (min-width: 721px) and (max-width: 1024px) {
     .context-section { padding: 56px 40px; }
   }
+  /* NAV — matches site-wide header on program.html / homepage */
+  .nav-outer { border-bottom: 0.5px solid rgba(107,30,46,0.13); position: sticky; top: 0; z-index: 100; background: rgba(232,221,208,0.95); backdrop-filter: blur(10px); }
+  nav { max-width: 1160px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--burgundy); }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--burgundy); }
+
+  /* FOOTER — matches site-wide footer on program.html / homepage */
+  footer { background: #E8DDD0; border-top: 0.5px solid rgba(107,30,46,0.13); padding: 4rem 2rem 2.5rem; }
+  .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand-desc { font-size: 0.88rem; color: #8C6A56; line-height: 1.75; margin-top: 0.75rem; max-width: 260px; }
+  .footer-col-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+  .footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-links a { font-size: 0.88rem; color: #8C6A56; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--burgundy); }
+  .footer-contact { font-size: 0.88rem; color: #8C6A56; line-height: 1.7; }
+  .footer-contact a { color: #8C6A56; text-decoration: none; transition: color 0.2s; }
+  .footer-contact a:hover { color: var(--burgundy); }
+  .footer-bottom { border-top: 0.5px solid rgba(107,30,46,0.13); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1160px; margin: 0 auto; }
+  .footer-copy { font-size: 0.75rem; color: #8C6A56; }
+  .footer-bottom-links { display: flex; gap: 1.5rem; }
+  .footer-bottom-links a { font-size: 0.75rem; color: #8C6A56; text-decoration: none; transition: color 0.2s; }
+  .footer-bottom-links a:hover { color: var(--burgundy); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: var(--burgundy); letter-spacing: 0.05em; }
+
+  @media (max-width: 900px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    nav .nav-links { display: none; }
+    nav .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 0.5px solid rgba(107,30,46,0.13); padding: 1.5rem 2rem; gap: 1.25rem; }
+    .nav-hamburger { display: flex; }
+  }
+  @media (max-width: 600px) {
+    .footer-inner { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+
+<!-- NAV -->
+<div class="nav-outer">
+  <nav>
+    <a href="https://zafeer.ca/" style="text-decoration:none;">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--burgundy);letter-spacing:0.06em;">Zafeer</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="https://zafeer.ca/index.html">Home</a>
+      <a href="https://zafeer.ca/program.html">Program</a>
+      <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
+      <a href="https://zafeer.ca/about.html">About</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</div>
 
 <!-- PAYMENT PAGE -->
 <div id="payment-page">
@@ -385,7 +439,6 @@
   <!-- HEADER: text left, photo right -->
   <header class="page-header">
     <div class="header-text">
-      <span class="brand-line">Zafeer &nbsp;·&nbsp; Zaina Warne</span>
       <h1 class="page-title">Success Without<br><em>Sacrifice</em></h1>
       <p class="page-subtitle">You don't negotiate your way to power.<br>You become powerful first, <strong>and negotiate from there.</strong></p>
     </div>
@@ -596,8 +649,54 @@
   </main>
 </div>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Zafeer</div>
+      <p class="footer-brand-desc">Helping high-achieving women build the inner authority to lead with greater influence, freedom, and fulfillment, without sacrificing themselves in the process.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <div class="footer-links">
+        <a href="https://zafeer.ca/index.html">Home</a>
+        <a href="https://zafeer.ca/program.html">Program</a>
+        <a href="https://zafeer.ca/testimonials.html">Testimonials</a>
+        <a href="https://zafeer.ca/about.html">About Zaina</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <div class="footer-links">
+        <a href="https://zainawarne.com/" target="_blank" rel="noopener">Invisible Ceiling Assessment&trade;</a>
+        <a href="https://zafeer.ca/negotiate-like-a-pro/">Negotiate Like a Pro&trade;</a>
+        <a href="https://zainawarne.com/quiet-authority-experience.html">Quiet Authority Experience&trade;</a>
+        <a href="https://zafeer.ca/success-without-sacrifice-payment.html">Enroll in Success Without Sacrifice&trade;</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Connect</div>
+      <div class="footer-contact">
+        <a href="https://www.linkedin.com/in/zaina-warne/" target="_blank" rel="noopener">LinkedIn</a><br>
+        <a href="mailto:zaina@zafeer.ca">zaina@zafeer.ca</a><br><br>
+        Victoria, British Columbia<br>Canada
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Zafeer · Zaina Warne. All Rights Reserved.</div>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
 
 <script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
   // Payment plan selection
   const plans = {
     full:  { url: 'https://buy.stripe.com/fZubJ2cMS5iW8YhcKy0oM03', label: 'Enroll Me Now: Pay in Full' },
